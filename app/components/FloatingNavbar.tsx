@@ -5,10 +5,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-    { label: "What's inside", href: "#features" },
-    { label: "Use case", href: "#use-case" },
-    { label: "Metrics", href: "#metrics" },
-    { label: "Smart Assist", href: "#smart-assist" },
+    { label: "About IEDC", href: "#features" },
+    { label: "Events", href: "#use-case" },
+    { label: "Startups", href: "#metrics" },
+    { label: "Resources", href: "#smart-assist" },
 ];
 
 export default function FloatingNavbar() {
@@ -58,7 +58,7 @@ export default function FloatingNavbar() {
                                 <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="#FF7A00" />
                             </svg>
                         </div>
-                        <span className="font-semibold text-[15px] text-text-main">Habitline</span>
+                        <span className="font-semibold text-[15px] text-text-main">IEDC SJCET</span>
                     </a>
 
                     {/* Desktop Nav Links */}
@@ -68,8 +68,8 @@ export default function FloatingNavbar() {
                                 key={link.href}
                                 href={link.href}
                                 className={`relative px-4 py-2 text-[13px] font-medium rounded-full transition-all duration-200 ${activeSection === link.href
-                                        ? "bg-[#1D1D1F] text-white"
-                                        : "text-text-muted hover:text-text-main"
+                                    ? "bg-[#1D1D1F] text-white"
+                                    : "text-text-muted hover:text-text-main"
                                     }`}
                             >
                                 {link.label}
@@ -129,8 +129,8 @@ export default function FloatingNavbar() {
                                     href={link.href}
                                     onClick={() => setMobileOpen(false)}
                                     className={`px-4 py-3 text-[15px] font-medium rounded-xl transition-all ${activeSection === link.href
-                                            ? "bg-[#1D1D1F] text-white"
-                                            : "text-text-muted hover:bg-gray-100 hover:text-text-main"
+                                        ? "bg-[#1D1D1F] text-white"
+                                        : "text-text-muted hover:bg-gray-100 hover:text-text-main"
                                         }`}
                                 >
                                     {link.label}

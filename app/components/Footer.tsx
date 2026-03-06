@@ -9,11 +9,10 @@ const fadeInUp = {
 };
 
 const quickLinks = [
-    { label: "Features", href: "#features" },
-    { label: "Use Cases", href: "#use-case" },
-    { label: "Social proof", href: "#metrics" },
-    { label: "Numbers", href: "#counter" },
-    { label: "AI Suggestions", href: "#smart-assist" },
+    { label: "About IEDC", href: "#features" },
+    { label: "Events", href: "#use-case" },
+    { label: "Startups", href: "#metrics" },
+    { label: "Resources", href: "#smart-assist" },
 ];
 
 const pages = [
@@ -24,7 +23,6 @@ const pages = [
 ];
 
 const support = [
-    { label: "FAQs", href: "#" },
     { label: "Contact", href: "#" },
     { label: "Privacy Policy", href: "#" },
     { label: "Terms & Conditions", href: "#" },
@@ -51,7 +49,7 @@ export default function Footer() {
                                     <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="#FF7A00" />
                                 </svg>
                             </div>
-                            <span className="font-semibold text-lg text-text-main">Habitline</span>
+                            <span className="font-semibold text-lg text-text-main">IEDC SJCET</span>
                         </div>
                         <h3 className="text-xl font-bold text-text-main mb-2">Stay on top of your habits</h3>
                         <p className="text-text-muted text-sm mb-6">
@@ -123,7 +121,7 @@ export default function Footer() {
                     className="flex flex-col md:flex-row items-center justify-between mt-16 pt-6 border-t border-border gap-4"
                 >
                     <p className="text-text-muted text-sm">
-                        Designed by <a href="https://www.webestica.com/" target="_blank" rel="noopener noreferrer" className="text-text-main hover:underline font-medium">Webestica</a>. Powered by <a href="https://framer.com/" target="_blank" rel="noopener noreferrer" className="text-text-main hover:underline font-medium">Framer</a>.
+                        Designed by <a href="https://www.webestica.com/" target="_blank" rel="noopener noreferrer" className="text-text-main hover:underline font-medium">Tech Team IEDC</a>.
                     </p>
                     <div className="flex items-center gap-3">
                         <a href="#" className="w-9 h-9 bg-card-bg rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">

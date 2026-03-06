@@ -71,7 +71,7 @@ export default function TestimonialsGrid() {
                     A closer look
                 </span>
                 <h2 className="text-3xl md:text-[42px] font-bold tracking-tight text-text-main mb-4">
-                    How people use Habitline every day
+                    Alumni Testimonials
                 </h2>
                 <div className="flex items-center justify-center gap-2 mb-2">
                     <span className="text-primary font-bold text-lg">4.5/5</span>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Apple, Smartphone } from "lucide-react";
 
@@ -9,6 +10,12 @@ const fadeInUp = {
 };
 
 export default function FinalCTA() {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
     return (
         <section className="py-20 md:py-32 max-w-6xl mx-auto px-6">
             <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
@@ -134,7 +141,7 @@ export default function FinalCTA() {
                                         const row = Math.floor(i / 7);
                                         const col = i % 7;
                                         const isCorner = (row < 3 && col < 3) || (row < 3 && col > 3) || (row > 3 && col < 3);
-                                        const isRandom = Math.random() > 0.5;
+                                        const isRandom = mounted && Math.random() > 0.5;
                                         return (
                                             <div
                                                 key={i}

@@ -7,7 +7,6 @@ import SocialProofCards from "./components/SocialProofCards";
 import MetricsSection from "./components/MetricsSection";
 import AISmartAssist from "./components/AISmartAssist";
 import TestimonialsGrid from "./components/TestimonialsGrid";
-import FAQSection from "./components/FAQSection";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 
@@ -23,7 +22,6 @@ export default function Home() {
       <MetricsSection />
       <AISmartAssist />
       <TestimonialsGrid />
-      <FAQSection />
       <FinalCTA />
       <Footer />
     </main>

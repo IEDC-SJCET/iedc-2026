@@ -8,6 +8,43 @@ const fadeInUp = {
     animate: { opacity: 1, y: 0 },
 };
 
+const Marquee = ({ className, reverse, pauseOnHover = false, children }: any) => {
+    return (
+        <div
+            className={`group flex overflow-hidden p-2 [--gap:1rem] [gap:var(--gap)] flex-row w-full ${className}`}
+            style={{ "--duration": "40s" } as React.CSSProperties}
+        >
+            <div className={`flex shrink-0 items-center justify-around [gap:var(--gap)] min-w-full animate-marquee flex-row ${reverse ? '[animation-direction:reverse]' : ''} ${pauseOnHover ? 'group-hover:[animation-play-state:paused]' : ''}`}>
+                {children}
+            </div>
+            <div className={`flex shrink-0 items-center justify-around [gap:var(--gap)] min-w-full animate-marquee flex-row ${reverse ? '[animation-direction:reverse]' : ''} ${pauseOnHover ? 'group-hover:[animation-play-state:paused]' : ''}`} aria-hidden="true">
+                {children}
+            </div>
+            <div className={`flex shrink-0 items-center justify-around [gap:var(--gap)] min-w-full animate-marquee flex-row ${reverse ? '[animation-direction:reverse]' : ''} ${pauseOnHover ? 'group-hover:[animation-play-state:paused]' : ''}`} aria-hidden="true">
+                {children}
+            </div>
+        </div>
+    );
+};
+
+const IconCard = ({ title, desc, icon, color }: any) => (
+    <div className="w-32 h-32 md:w-36 md:h-36 bg-white flex-shrink-0 rounded-2xl shadow-xl border border-gray-100 flex flex-col items-center justify-center p-3">
+        <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center text-white text-xl md:text-2xl mb-3 shadow-[0_4px_14px_0_rgba(0,0,0,0.2)]" style={{ backgroundColor: color }}>
+            {icon}
+        </div>
+        <p className="text-[12px] md:text-[13px] font-bold text-center text-gray-800 leading-tight">
+            {title}
+        </p>
+        {desc && <p className="text-[10px] md:text-[11px] text-center text-gray-500 mt-1 font-medium">{desc}</p>}
+    </div>
+);
+
+const ImageCard = ({ bg }: any) => (
+    <div className={`w-32 h-32 md:w-36 md:h-36 flex-shrink-0 rounded-2xl overflow-hidden shadow-xl border border-gray-100 relative ${bg || 'bg-gradient-to-br from-gray-200 to-gray-300'}`}>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent mix-blend-overlay" />
+    </div>
+);
+
 export default function HabitsShowcase() {
     return (
         <section className="relative py-20 md:py-32 overflow-hidden">
@@ -69,43 +106,30 @@ export default function HabitsShowcase() {
                 className="relative max-w-5xl mx-auto px-6"
             >
                 <div className="relative flex flex-col items-center">
-                    {/* Habit icons — desktop, arranged around */}
-                    <div className="hidden lg:block absolute inset-0">
-                        {/* Top-left cluster */}
-                        <div className="absolute left-0 top-4 flex items-center gap-3">
-                            <div className="w-28 h-20 bg-gray-200 rounded-xl overflow-hidden" />
-                            <div className="flex flex-col items-center">
-                                <div className="w-11 h-11 bg-orange-500 rounded-full flex items-center justify-center text-white text-lg mb-1">🏃</div>
-                                <p className="text-[11px] font-medium">Morning walk</p>
-                            </div>
-                            <div className="w-28 h-20 bg-gray-200 rounded-xl overflow-hidden" />
-                        </div>
-                        {/* Top-right cluster */}
-                        <div className="absolute right-0 top-4 flex items-center gap-3">
-                            <div className="w-28 h-20 bg-gray-200 rounded-xl overflow-hidden" />
-                            <div className="flex flex-col items-center">
-                                <div className="w-11 h-11 bg-blue-600 rounded-full flex items-center justify-center text-white text-lg mb-1">🧘</div>
-                                <p className="text-[11px] font-medium text-center">Stretch for<br />5 minutes</p>
-                            </div>
-                            <div className="w-28 h-20 bg-gray-200 rounded-xl overflow-hidden" />
-                        </div>
-                        {/* Bottom-left cluster */}
-                        <div className="absolute left-0 bottom-20 flex items-center gap-3">
-                            <div className="w-28 h-20 bg-gray-200 rounded-xl overflow-hidden" />
-                            <div className="flex flex-col items-center">
-                                <div className="w-11 h-11 bg-red-500 rounded-full flex items-center justify-center text-white text-lg mb-1">🧹</div>
-                                <p className="text-[11px] font-medium text-center">Clean<br />workspace</p>
-                            </div>
-                            <div className="w-28 h-20 bg-gray-200 rounded-xl overflow-hidden" />
-                        </div>
-                        {/* Bottom-right cluster */}
-                        <div className="absolute right-0 bottom-20 flex items-center gap-3">
-                            <div className="w-28 h-20 bg-gray-200 rounded-xl overflow-hidden" />
-                            <div className="flex flex-col items-center">
-                                <div className="w-11 h-11 bg-blue-400 rounded-full flex items-center justify-center text-white text-lg mb-1">💧</div>
-                                <p className="text-[11px] font-medium">Track water</p>
-                            </div>
-                        </div>
+                    {/* Background Marquee Rows */}
+                    <div className="absolute inset-0 z-0 flex flex-col justify-center overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)] pointer-events-none">
+                        {/* Row 1 */}
+                        <Marquee className="mb-2 md:mb-4" reverse={false}>
+                            <ImageCard bg="bg-gradient-to-br from-[#E2B091] to-[#C38B72]" />
+                            <IconCard title="Stretch for" desc="5 minutes" icon="🏃" color="#3B82F6" />
+                            <ImageCard bg="bg-gradient-to-br from-[#D9C4B3] to-[#A38B79]" />
+                            <IconCard title="Morning walk" icon="🚶‍♂️" color="#FF5500" />
+                            <ImageCard bg="bg-gradient-to-br from-[#FCD34D] to-[#F59E0B]" />
+                            <IconCard title="Clean workspace" icon="🧹" color="#EF4444" />
+                            <ImageCard bg="bg-gradient-to-br from-[#93C5FD] to-[#3B82F6]" />
+                        </Marquee>
+
+                        {/* Row 2 */}
+                        <Marquee className="mt-2 md:mt-4" reverse={true}>
+                            <IconCard title="Read 10 pages" icon="📖" color="#8B5CF6" />
+                            <ImageCard bg="bg-gradient-to-br from-[#D1D5DB] to-[#9CA3AF]" />
+                            <IconCard title="Track water" icon="💧" color="#0EA5E9" />
+                            <ImageCard bg="bg-gradient-to-br from-[#4B5563] to-[#1F2937]" />
+                            <IconCard title="Meditate" desc="10 minutes" icon="🧘" color="#A855F7" />
+                            <ImageCard bg="bg-gradient-to-br from-[#86EFAC] to-[#22C55E]" />
+                            <IconCard title="Eat healthy" icon="🥗" color="#22C55E" />
+                            <ImageCard bg="bg-gradient-to-br from-[#E9D5FF] to-[#A855F7]" />
+                        </Marquee>
                     </div>
 
                     {/* Central Phone Mockup */}
