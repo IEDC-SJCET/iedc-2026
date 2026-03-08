@@ -189,7 +189,7 @@ export default function MetricsSection() {
                     </div>
                     <div className="text-center">
                         <p className="text-4xl md:text-5xl font-bold text-text-main">
-                            3000<span className="text-primary">+</span>
+                            2500<span className="text-primary">+</span>
                         </p>
                         <p className="text-text-muted text-sm mt-2">
                             Active

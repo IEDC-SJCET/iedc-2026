@@ -25,8 +25,8 @@ export default function Home() {
         <div className="absolute inset-0 opacity-[0.05] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-multiply" />
       </div>
 
+      <FloatingNavbar />
       <div className="relative z-10 bg-white/20 backdrop-blur-[100px]">
-        <FloatingNavbar />
         <HeroSection />
         <HabitsShowcase />
         <BentoFeatures />
