@@ -260,9 +260,9 @@ function PastExecomContent() {
                                 <X size={20} />
                             </button>
                             <div className="mt-8 text-white">
-                                <span className="text-[#FF7A00] text-xs font-bold tracking-[0.2em] mb-4 block uppercase">{selectedLead.role}</span>
+                                <span className="text-primary text-xs font-bold tracking-[0.2em] mb-4 block uppercase">{selectedLead.role}</span>
                                 <h2 className="text-4xl font-bold mb-6">{selectedLead.name}</h2>
-                                <div className="aspect-[4/5] rounded-3xl overflow-hidden mb-8 border border-white/10">
+                                <div className="aspect-4/5 rounded-3xl overflow-hidden mb-8 border border-white/10">
                                     <img src={selectedLead.image} alt={selectedLead.name} className="w-full h-full object-cover" />
                                 </div>
                                 <div className="space-y-6">

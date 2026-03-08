@@ -346,5 +346,265 @@ export const execomHistory: ExecomData[] = [
                 ]
             }
         ]
-    }
+    },
+    {
+        year: "20/21",
+        leads: [
+            {
+                name: "Gouri S Kumar",
+                role: "Chief Executive Officer",
+                image: "/execom/20-21/gouri_s_kumar.png",
+                bio: "Leading the executive committee and strategic initiatives.",
+                linkedin: "https://www.linkedin.com/in/gouri-sreekumar/",
+                email: "",
+                letter: "G"
+            },
+            {
+                name: "Joe Martin",
+                role: "Chief Finance & Technical Officer",
+                image: "/execom/20-21/joe_martin.png",
+                bio: "Handling financial planning and future tech initiatives.",
+                linkedin: "https://www.linkedin.com/in/joe-martin-4685351b6/",
+                email: "",
+                letter: "J"
+            },
+            {
+                name: "Ashly Sibichan",
+                role: "Chief Operating Officer",
+                image: "/execom/20-21/ashly_sebastian.png",
+                bio: "Managing operations and internal processes.",
+                linkedin: "https://www.linkedin.com/in/ashly-sibichan/",
+                email: "",
+                letter: "A"
+            },
+            {
+                name: "Andrea Antony",
+                role: "Chief Marketing Officer",
+                image: "/execom/20-21/andrea_antony.png",
+                bio: "Driving marketing strategies and outreach programs.",
+                linkedin: "https://www.linkedin.com/in/andreaantony/",
+                email: "",
+                letter: "A"
+            },
+            {
+                name: "Shinu Saju",
+                role: "Chief Technical Officer",
+                image: "/execom/20-21/shinu_saju.png",
+                bio: "Fostering technological innovation and technical teams.",
+                linkedin: "",
+                email: "",
+                letter: "S"
+            },
+            {
+                name: "Johan Issac",
+                role: "Chief Creative Officer",
+                image: "/execom/20-21/johan_issac.png",
+                bio: "Overseeing creative direction and design execution.",
+                linkedin: "https://www.linkedin.com/in/johanissac/",
+                email: "",
+                letter: "J"
+            },
+            {
+                name: "Lija Alex",
+                role: "Chief Social Officer",
+                image: "/execom/20-21/lija_alex.png",
+                bio: "Managing social responsibility and community impact initiatives.",
+                linkedin: "https://www.linkedin.com/in/lijaalex123/",
+                email: "",
+                letter: "L"
+            }
+        ],
+        teamSections: [
+            {
+                title: "Finance Team",
+                members: [
+                    { name: "Alana Benny", role: "Finance Officer", image: "/execom/20-21/alana_benny.jpg", linkedin: "https://www.linkedin.com/in/alanabenny/" },
+                    { name: "Amalu Rajan", role: "Finance Officer", image: "/execom/20-21/amalu_rajan.jpg", linkedin: "https://www.linkedin.com/in/amalurajan/" }
+                ]
+            },
+            {
+                title: "Operations Team",
+                members: [
+                    { name: "Basil Philip Isaac", role: "Operating Officer", image: "/execom/20-21/basil_philip.png", linkedin: "https://www.linkedin.com/in/basilphilip/" },
+                    { name: "Arun Alex", role: "Operating Officer", image: "/execom/20-21/arun_alex.png", linkedin: "https://www.linkedin.com/in/arun-alex-6b9a24191/" },
+                    { name: "Sandra Pramod", role: "Operating Officer", image: "/execom/20-21/sandra_pramod.png", linkedin: "https://www.linkedin.com/in/sandrapramod/" }
+                ]
+            },
+            {
+                title: "Marketing Team",
+                members: [
+                    { name: "Rinu Mathew", role: "Marketing Officer", image: "/execom/20-21/rinu_mathew.png", linkedin: "https://www.linkedin.com/in/rinumathews/" },
+                    { name: "Anu Jose", role: "Marketing Officer", image: "/execom/20-21/anu_jose.png", linkedin: "https://www.linkedin.com/in/anu-jose-3785aa1a9/" },
+                    { name: "Arun K", role: "Marketing Officer", image: "/execom/20-21/arun_k.png", linkedin: "https://www.linkedin.com/in/linkeiarun/" },
+                    { name: "Sreelakshmi Madhu", role: "Marketing Officer", image: "/execom/20-21/sreelakshmi_madhu.png", linkedin: "" }
+                ]
+            },
+            {
+                title: "Technical Team",
+                members: [
+                    { name: "Kennith Philips", role: "Technical Officer (Hackathons)", image: "/execom/20-21/kennith_philips.png", linkedin: "https://www.linkedin.com/in/kenn850/" },
+                    { name: "Aiswarya Raju", role: "Technical Officer (Women In Design)", image: "/execom/20-21/aiswarya_raju.png", linkedin: "https://www.linkedin.com/in/aiswarya-raju/" },
+                    { name: "Adithya Ramesh", role: "Technical Officer (AI & ML)", image: "/execom/20-21/adithya_ramesh.png", linkedin: "https://www.linkedin.com/in/adithya-ramesh-34b66417a/" },
+                    { name: "Tom Thomas", role: "Technical Officer (Maker Space)", image: "/execom/20-21/tom_thomas.jpg", linkedin: "https://www.linkedin.com/in/tom-thomas-06695b92/" },
+                    { name: "Abraham Reji", role: "Technical Officer (Foss Cell)", image: "/execom/20-21/abraham_reji.png", linkedin: "" }
+                ]
+            },
+            {
+                title: "Creative Team",
+                members: [
+                    { name: "Christy Varghese", role: "Creative Officer", image: "/execom/20-21/christy_varghese.png", linkedin: "https://www.linkedin.com/in/christy-varghese/" },
+                    { name: "Teena Tomy", role: "Creative Officer", image: "/execom/20-21/teena_tomy.png", linkedin: "https://www.linkedin.com/in/teenatomy129/" },
+                    { name: "Rahul Surendran", role: "Creative Officer", image: "/execom/20-21/rahul_surendran.png", linkedin: "https://www.linkedin.com/in/rahul-surendran-a749461aa/" }
+                ]
+            },
+            {
+                title: "Social Team",
+                members: [
+                    { name: "Tobin Thomson", role: "Social Officer", image: "/execom/20-21/tobin_thomason.png", linkedin: "https://www.linkedin.com/in/tobin-thomson-8600961aa/" },
+                    { name: "Parvathy S Nath", role: "Social Officer", image: "/execom/20-21/parvathy_s_nath.jpg", linkedin: "https://www.linkedin.com/in/parvathy-s-nath/" },
+                    { name: "Roshan Siby", role: "Social Officer", image: "/execom/20-21/roshan_siby.png", linkedin: "https://www.linkedin.com/in/roshan-siby/" },
+                    { name: "Anitta Mary Thomas", role: "Social Officer", image: "/execom/20-21/anitta_mary.png", linkedin: "https://www.linkedin.com/in/anitta-mary-thomas-b348aa1a5/" },
+                    { name: "Deepthi Mary John", role: "Social Officer", image: "/execom/20-21/deepthi_mary.png", linkedin: "" }
+                ]
+            }
+        ]
+    },
+    {
+        year: "19/20",
+        leads: [
+            {
+                name: "Vishal Thomas Payikkad",
+                role: "Chief Executive Officer",
+                image: "",
+                bio: "Leading the executive committee and strategic initiatives.",
+                linkedin: "",
+                email: "",
+                letter: "V"
+            },
+            {
+                name: "Seby Antony",
+                role: "Chief Finance Officer",
+                image: "/execom/19-20/seby_antony.png",
+                bio: "Handling financial planning and resource management.",
+                linkedin: "https://www.linkedin.com/in/seby-antony-b32b50169",
+                email: "",
+                letter: "S"
+            },
+            {
+                name: "Andrea Antony",
+                role: "Chief Marketing Officer",
+                image: "/execom/19-20/andrea_antony.png",
+                bio: "Driving marketing strategies and outreach programs.",
+                linkedin: "https://www.linkedin.com/in/andreaantony",
+                email: "",
+                letter: "A"
+            },
+            {
+                name: "Ouseppachan George",
+                role: "Chief Creative Officer",
+                image: "/execom/19-20/ouseppachan_george.png",
+                bio: "Overseeing creative direction and design execution.",
+                linkedin: "https://www.linkedin.com/in/ouseppachengeorge-3049/",
+                email: "",
+                letter: "O"
+            },
+            {
+                name: "Gouri S Kumar",
+                role: "Chief Skill Officer",
+                image: "/execom/19-20/gouri_s_kumar.png",
+                bio: "Overseeing skill development and training programs.",
+                linkedin: "https://www.linkedin.com/in/gouri-sreekumar",
+                email: "",
+                letter: "G"
+            },
+            {
+                name: "Kenneth Philips",
+                role: "Chief Technical Officer",
+                image: "/execom/19-20/kenneth_philips.png",
+                bio: "Fostering technological innovation and technical teams.",
+                linkedin: "https://www.linkedin.com/in/kenn850",
+                email: "",
+                letter: "K"
+            },
+            {
+                name: "Nissi Samuel",
+                role: "Chief Operating Officer",
+                image: "",
+                bio: "Managing operations and internal processes.",
+                linkedin: "https://www.linkedin.com/in/nissi-s-565570183",
+                email: "",
+                letter: "N"
+            }
+        ],
+        teamSections: []
+    },
+    {
+        year: "17/18",
+        leads: [
+            {
+                name: "Sheyby Babu",
+                role: "Chief Skill Officer",
+                image: "/execom/17-18/sheyby.jpg",
+                bio: "Overseeing skill development and training programs.",
+                linkedin: "https://www.linkedin.com/in/shebymariambabu",
+                email: "",
+                letter: "S"
+            },
+            {
+                name: "Neethu George",
+                role: "Chief Operating Officer",
+                image: "/execom/17-18/neethu.jpg",
+                bio: "Managing operations and internal processes.",
+                linkedin: "https://www.linkedin.com/in/neethu-george-892187146",
+                email: "",
+                letter: "N"
+            },
+            {
+                name: "Anto P Biju",
+                role: "Chief Finance Officer",
+                image: "",
+                bio: "Handling financial planning and resource management.",
+                linkedin: "",
+                email: "",
+                letter: "A"
+            },
+            {
+                name: "Cyril Cherian",
+                role: "Chief Marketing Officer",
+                image: "/execom/17-18/cyril.jpg",
+                bio: "Driving marketing strategies and outreach programs.",
+                linkedin: "https://www.linkedin.com/in/xcyrilcherian",
+                email: "",
+                letter: "C"
+            },
+            {
+                name: "Sandeep Salmon",
+                role: "Chief Creative Officer",
+                image: "/execom/17-18/sandeep.jpg",
+                bio: "Overseeing creative direction and design execution.",
+                linkedin: "https://www.linkedin.com/in/sandeepsalmon",
+                email: "",
+                letter: "S"
+            },
+            {
+                name: "Ebin Alex",
+                role: "Chief Technical Officer",
+                image: "/execom/17-18/ebin.jpg",
+                bio: "Fostering technological innovation and technical teams.",
+                linkedin: "https://www.linkedin.com/in/ebin-alex",
+                email: "",
+                letter: "E"
+            },
+            {
+                name: "Bony Antony",
+                role: "Chief Executive Officer",
+                image: "",
+                bio: "Leading the executive committee and strategic initiatives.",
+                linkedin: "https://www.linkedin.com/in/bonny-mathew-antony-mech-430586134",
+                email: "",
+                letter: "B"
+            }
+        ],
+        teamSections: []
+    },
 ];
