@@ -15,7 +15,7 @@ export interface TeamSection {
 
 export interface ExecomData {
     year: string;
-    leads: Member[];
+    leads?: Member[];
     teamSections: TeamSection[];
 }
 
@@ -100,48 +100,17 @@ export const execomHistory: ExecomData[] = [
     },
     {
         year: "25/26",
-        leads: [
-            {
-                name: "Past CEO 25",
-                role: "CEO",
-                image: "/execom/tims.jpeg",
-                bio: "Leading the growth of IEDC in 2025.",
-                linkedin: "#",
-                email: "past25@sjcetpalai.ac.in",
-                letter: "C"
-            },
-            {
-                name: "Past CTO 25",
-                role: "CTO",
-                image: "/execom/tims.jpeg",
-                bio: "Driving technical excellence in 2025.",
-                linkedin: "#",
-                email: "past25@sjcetpalai.ac.in",
-                letter: "T"
-            }
-        ],
         teamSections: [
             {
-                title: "Tech Team 25/26",
+                title: "Core Team",
                 members: [
                     { name: "Member A", role: "Dev", image: "" }
                 ]
-            }
+            },
         ]
     },
     {
         year: "24/25",
-        leads: [
-            {
-                name: "Past CEO 24",
-                role: "CEO",
-                image: "/execom/tims.jpeg",
-                bio: "Leading the historical growth of IEDC.",
-                linkedin: "#",
-                email: "past@sjcetpalai.ac.in",
-                letter: "C"
-            }
-        ],
         teamSections: [
             {
                 title: "Core Team 24/25",

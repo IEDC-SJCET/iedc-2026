@@ -19,7 +19,7 @@ interface Member {
 import { execomHistory } from "./data";
 
 const currentExecom = execomHistory.find(e => e.year === "26/27")!;
-const leads = currentExecom.leads;
+const leads = currentExecom.leads || [];
 const teamSections = currentExecom.teamSections;
 
 export default function ExecomPage() {

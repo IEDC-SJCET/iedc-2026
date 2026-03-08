@@ -12,17 +12,14 @@ function PastExecomContent() {
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
-
-    // Read the year param from URL, replacing '-' back to '/' for data matching
     const rawYearParam = searchParams.get("year");
     const selectedYear = rawYearParam ? rawYearParam.replace("-", "/") : null;
 
     const [selectedLead, setSelectedLead] = useState<Member | null>(null);
 
-    // Function to update URL state
     const handleSetYear = (year: string | null) => {
         if (!year) {
-            router.push(pathname); // Clears params, goes back to legacy list
+            router.push(pathname);
         } else {
             router.push(`${pathname}?year=${year.replace("/", "-")}`);
         }
@@ -113,7 +110,7 @@ function PastExecomContent() {
 
                                         <div className="absolute bottom-8 left-8 right-8 flex items-center justify-between">
                                             <p className="text-sm font-medium text-gray-500 group-hover:text-gray-400 transition-colors">
-                                                {entry.leads.length} Leads • {entry.teamSections.length} Departments
+                                                {entry.leads ? `${entry.leads.length} Leads • ` : ""}{entry.teamSections.length} Departments
                                             </p>
                                             <div className="w-12 h-12 rounded-full bg-black group-hover:bg-[#FF7A00] flex items-center justify-center transition-all translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 shadow-lg shadow-[#FF7A00]/20">
                                                 <ArrowRight size={20} className="text-white" />
@@ -154,48 +151,50 @@ function PastExecomContent() {
 
                             {currentData && (
                                 <>
-                                    <section className="h-[60vh] md:h-[75vh] min-h-[500px] flex overflow-hidden border-y border-white/5">
-                                        {currentData.leads.map((lead, index) => (
-                                            <motion.div
-                                                key={`${selectedYear}-${index}`}
-                                                initial={{ scaleX: 0 }}
-                                                animate={{ scaleX: 1 }}
-                                                transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                                                onClick={() => setSelectedLead(lead)}
-                                                className="relative flex-1 group cursor-pointer overflow-hidden border-r border-white/5 last:border-r-0 hover:flex-[1.5] transition-all duration-700 ease-out"
-                                            >
-                                                <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] text-[40vw] font-black select-none pointer-events-none group-hover:opacity-[0.05] transition-opacity">
-                                                    {lead.letter}
-                                                </div>
-                                                <div className="absolute inset-0 bg-[#FF7A00]/10 group-hover:bg-[#FF7A00]/0 transition-colors duration-500">
-                                                    <img
-                                                        src={lead.image}
-                                                        alt={lead.name}
-                                                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
-                                                    />
-                                                </div>
-                                                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
-                                                <div className="absolute left-1/2 -translate-x-1/2 bottom-12 whitespace-nowrap hidden md:block group-hover:opacity-0 transition-opacity">
-                                                    <p className="text-xs font-bold tracking-[0.4em] uppercase text-[#FF7A00] rotate-180 [writing-mode:vertical-rl]">
-                                                        {lead.role}
-                                                    </p>
-                                                </div>
-                                                <div className="absolute inset-0 flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                                    <motion.div
-                                                        initial={{ y: 20 }}
-                                                        whileHover={{ y: 0 }}
-                                                        className="space-y-2 text-white"
-                                                    >
-                                                        <h3 className="text-2xl font-bold leading-none">{lead.name}</h3>
-                                                        <p className="text-[#FF7A00] font-medium text-sm">{lead.role}</p>
-                                                        <div className="pt-4">
-                                                            <span className="text-[10px] uppercase tracking-widest font-black text-white/50 border border-white/20 px-3 py-1 rounded-full">Explore Profile</span>
-                                                        </div>
-                                                    </motion.div>
-                                                </div>
-                                            </motion.div>
-                                        ))}
-                                    </section>
+                                    {currentData.leads && currentData.leads.length > 0 && (
+                                        <section className="h-[60vh] md:h-[75vh] min-h-[500px] flex overflow-hidden border-y border-white/5">
+                                            {currentData.leads.map((lead, index) => (
+                                                <motion.div
+                                                    key={`${selectedYear}-${index}`}
+                                                    initial={{ scaleX: 0 }}
+                                                    animate={{ scaleX: 1 }}
+                                                    transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                                                    onClick={() => setSelectedLead(lead)}
+                                                    className="relative flex-1 group cursor-pointer overflow-hidden border-r border-white/5 last:border-r-0 hover:flex-[1.5] transition-all duration-700 ease-out"
+                                                >
+                                                    <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] text-[40vw] font-black select-none pointer-events-none group-hover:opacity-[0.05] transition-opacity">
+                                                        {lead.letter}
+                                                    </div>
+                                                    <div className="absolute inset-0 bg-[#FF7A00]/10 group-hover:bg-[#FF7A00]/0 transition-colors duration-500">
+                                                        <img
+                                                            src={lead.image}
+                                                            alt={lead.name}
+                                                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+                                                        />
+                                                    </div>
+                                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
+                                                    <div className="absolute left-1/2 -translate-x-1/2 bottom-12 whitespace-nowrap hidden md:block group-hover:opacity-0 transition-opacity">
+                                                        <p className="text-xs font-bold tracking-[0.4em] uppercase text-[#FF7A00] rotate-180 [writing-mode:vertical-rl]">
+                                                            {lead.role}
+                                                        </p>
+                                                    </div>
+                                                    <div className="absolute inset-0 flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                        <motion.div
+                                                            initial={{ y: 20 }}
+                                                            whileHover={{ y: 0 }}
+                                                            className="space-y-2 text-white"
+                                                        >
+                                                            <h3 className="text-2xl font-bold leading-none">{lead.name}</h3>
+                                                            <p className="text-[#FF7A00] font-medium text-sm">{lead.role}</p>
+                                                            <div className="pt-4">
+                                                                <span className="text-[10px] uppercase tracking-widest font-black text-white/50 border border-white/20 px-3 py-1 rounded-full">Explore Profile</span>
+                                                            </div>
+                                                        </motion.div>
+                                                    </div>
+                                                </motion.div>
+                                            ))}
+                                        </section>
+                                    )}
 
                                     <section className="pb-32 pt-24 space-y-24">
                                         {currentData.teamSections.map((section, sIndex) => (
