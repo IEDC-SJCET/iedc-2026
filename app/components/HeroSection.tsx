@@ -20,21 +20,22 @@ export default function HeroSection() {
 
             <div className="relative min-h-screen flex flex-col items-center justify-start pt-32 pb-0 overflow-hidden">
 
-                <div className="absolute inset-0 z-0 bg-[#0A0A0A] overflow-hidden">
+                <div className="absolute inset-0 z-0 bg-[#0A0A0A] overflow-hidden will-change-transform">
                     <Image
                         src="/sjcet.jpg"
                         alt="Background"
                         fill
                         className="object-cover opacity-60 mix-blend-luminosity"
                         priority
+                        sizes="100vw"
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-br from-[#110A05]/90 via-[#4A1D00]/70 to-[#FF7A00]/50 mix-blend-multiply" />
                     <div className="absolute inset-0 bg-black/20" />
 
-                    <div className="absolute top-1/4 left-1/4 -translate-x-1/2 w-[600px] h-[600px] bg-[#FF7A00]/40 rounded-full blur-[120px]" />
-                    <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-[#FF5500]/40 rounded-full blur-[100px]" />
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#FF7A00]/50 rounded-full blur-[120px]" />
+                    <div className="absolute top-1/4 left-1/4 -translate-x-1/2 w-[600px] h-[600px] bg-[#FF7A00]/40 rounded-full blur-[120px] will-change-[transform,opacity]" />
+                    <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-[#FF5500]/40 rounded-full blur-[100px] will-change-[transform,opacity]" />
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#FF7A00]/5 rounded-full blur-[120px] will-change-[transform,opacity]" />
                 </div>
 
 

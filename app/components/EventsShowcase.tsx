@@ -139,7 +139,7 @@ export default function EventsShowcase() {
                                     src={summitImages[card.img]}
                                     alt={`Summit moment ${card.img + 1}`}
                                     fill
-                                    className="object-cover"
+                                    className="object-cover will-change-transform"
                                     sizes={isDesktop ? "160px" : "80px"}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
@@ -172,7 +172,7 @@ export default function EventsShowcase() {
                                     onPointerCancel={handlePointerUp}
                                 >
                                     <div
-                                        className="flex h-full transition-transform duration-300 ease-out"
+                                        className="flex h-full transition-transform duration-300 ease-out will-change-transform"
                                         style={{
                                             transform: `translateX(calc(-${current * 100}% + ${dragging ? offset : 0}px))`,
                                             transitionDuration: dragging ? "0ms" : "400ms",

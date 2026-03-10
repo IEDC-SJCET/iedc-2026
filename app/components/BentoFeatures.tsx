@@ -79,13 +79,14 @@ export default function BentoFeatures() {
                     <motion.div
                         variants={floating}
                         animate="animate"
-                        className="absolute inset-x-0 bottom-0 top-6 opacity-[0.2] scale-[1.3] pointer-events-none"
+                        className="absolute inset-x-0 bottom-0 top-6 opacity-[0.2] scale-[1.3] pointer-events-none will-change-transform"
                     >
                         <Image
                             src="/whyiedc/mentoring.png"
                             alt="Mentoring Background"
                             fill
                             className="object-contain transform rotate-[-6deg] drop-shadow-[0_20px_50px_rgba(255,107,74,0.4)]"
+                            sizes="(max-width: 768px) 100vw, 33vw"
                         />
                     </motion.div>
 
@@ -126,13 +127,14 @@ export default function BentoFeatures() {
                             scale: 1.2
                         }}
                         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute inset-0 opacity-[0.1] pointer-events-none"
+                        className="absolute inset-0 opacity-[0.1] pointer-events-none will-change-transform"
                     >
                         <Image
                             src="/whyiedc/innovation.png"
                             alt="Innovation Background"
                             fill
                             className="object-contain"
+                            sizes="(max-width: 768px) 100vw, 66vw"
                         />
                     </motion.div>
 
@@ -160,13 +162,14 @@ export default function BentoFeatures() {
                         <motion.div
                             animate={{ scale: [1, 1.05, 1], rotate: [0, 3, 0] }}
                             transition={{ duration: 8, repeat: Infinity }}
-                            className="w-full h-full relative"
+                            className="w-full h-full relative will-change-transform"
                         >
                             <Image
                                 src="/whyiedc/networking.png"
                                 alt="Networking Background"
                                 fill
                                 className="object-contain"
+                                sizes="(max-width: 768px) 100vw, 25vw"
                             />
                         </motion.div>
                     </div>
@@ -191,13 +194,14 @@ export default function BentoFeatures() {
                             scale: 1.4
                         }}
                         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute inset-0 opacity-[0.15] pointer-events-none"
+                        className="absolute inset-0 opacity-[0.15] pointer-events-none will-change-transform"
                     >
                         <Image
                             src="/whyiedc/incubation.png"
                             alt="Incubation Background"
                             fill
                             className="object-contain"
+                            sizes="(max-width: 768px) 100vw, 40vw"
                         />
                     </motion.div>
 

@@ -31,7 +31,7 @@ export default function AboutSJCET() {
                         SJCET BOOTCAMP - <span className="text-[#FF6B4A]">IEDC</span>
                     </h2>
                     <p className="text-gray-600 text-lg md:text-xl leading-relaxed font-medium max-w-4xl text-justify">
-                        The SJCET Startup Bootcamp- IEDC (Innovation and Entrepreneurship Development Centre) was set up on 9th March 2015 as a part of the Kerala Startup Mission (KSUM) initiative to develop a startup culture amongst students. The IEDCs are platforms set up in Engineering, Management, Arts & Science Colleges and Polytechnics with an aim to provide students an opportunity to experiment and innovate. KSUM has set up IEDCs in 226 institutions across the State which provide avenues for creative students to learn...
+                        IEDC SJCET Bootcamp is a student community at St. Joseph’s College of Engineering and Technology, Palai, functioning under Kerala Startup Mission (KSUM). It promotes innovation, technology and entrepreneurship through workshops, hackathons, mentorship, and collaborative initiatives, creating a space where students develop skills, explore ideas, and build impactful solutions.
                     </p>
                 </motion.div>
             </div>
@@ -85,7 +85,7 @@ export default function AboutSJCET() {
                                 Vision<span className="text-[#FF6B4A] text-5xl">.</span>
                             </h3>
                             <p className="text-gray-600 text-lg leading-relaxed font-medium text-justify">
-                                To create an innovation culture among innovators by introducing them the State-of-the-art technologies and positioning the institution as a Learning and Innovation Platform by delivering technically competent and skilled entrepreneurs.
+                                To build a vibrant student community that inspires innovation, technology, and entrepreneurship, empowering members to turn ideas into impactful solutions.
                             </p>
                         </div>
                     </motion.div>

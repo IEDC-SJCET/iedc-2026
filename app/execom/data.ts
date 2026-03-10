@@ -46,8 +46,8 @@ export const execomHistory: ExecomData[] = [
                 role: "CTO",
                 image: "/execom/24-25/tims.jpeg",
                 bio: "Driving technical excellence and product development within IEDC. Specialized in emerging technologies.",
-                linkedin: "#",
-                email: "tims@sjcetpalai.ac.in",
+                linkedin: "https://linkedin.com/in/tims-tittus/",
+                email: "timstittus2027@sjcetpalai.ac.in",
                 letter: "T"
             },
             {

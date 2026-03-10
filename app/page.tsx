@@ -1,14 +1,19 @@
+"use client";
+
+import dynamic from "next/dynamic";
 import FloatingNavbar from "./components/FloatingNavbar";
 import HeroSection from "./components/HeroSection";
 import HabitsShowcase from "./components/HabitsShowcase";
 import BentoFeatures from "./components/BentoFeatures";
 import AboutSJCET from "./components/AboutSJCET";
 import EventSection from "./components/EventSection";
-import EventsShowcase from "./components/EventsShowcase";
-import GlobeSection from "./components/GlobeSection";
-import TestimonialsGrid from "./components/TestimonialsGrid";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
+
+// Lazy load heavy components
+const EventsShowcase = dynamic(() => import("./components/EventsShowcase"), { ssr: false });
+const GlobeSection = dynamic(() => import("./components/GlobeSection"), { ssr: false });
+const TestimonialsGrid = dynamic(() => import("./components/TestimonialsGrid"), { ssr: false });
 
 export default function Home() {
   return (
@@ -26,7 +31,7 @@ export default function Home() {
       </div>
 
       <FloatingNavbar />
-      <div className="relative z-10 bg-white/20 backdrop-blur-[100px]">
+      <div className="relative z-10 bg-white/20 backdrop-blur-3xl">
         <HeroSection />
         <HabitsShowcase />
         <BentoFeatures />

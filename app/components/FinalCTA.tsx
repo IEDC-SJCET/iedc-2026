@@ -17,7 +17,7 @@ export default function FinalCTA() {
     }, []);
 
     return (
-        <section className="py-20 md:py-32 max-w-6xl mx-auto px-6">
+        <section className="py-20 md:py-7 max-w-6xl mx-auto px-6">
             <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                 {/* Left content */}
                 <motion.div
@@ -29,12 +29,12 @@ export default function FinalCTA() {
                     className="lg:w-1/2 text-center lg:text-left"
                 >
                     <h2 className="text-3xl md:text-[42px] font-bold tracking-tight text-text-main leading-tight mb-4">
-                        Build better habits
+                        A Unified Portal
                         <br />
-                        with less effort
+                        for IEDC Innovators
                     </h2>
                     <p className="text-text-muted text-[15px] leading-relaxed mb-8 max-w-md mx-auto lg:mx-0">
-                        Track what matters, stay organized, and improve at your own pace.
+                        Access events, track projects, collaborate with innovators, and manage your startup journey through the IEDC student portal.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
                         <a
@@ -43,8 +43,7 @@ export default function FinalCTA() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 bg-[#1D1D1F] text-white rounded-full px-6 py-3 text-sm font-medium hover:bg-[#333] transition-colors"
                         >
-                            <Apple size={16} />
-                            Download for iPhone
+                            Login to Portal
                         </a>
                         <a
                             href="https://play.google.com/store/"
@@ -52,8 +51,7 @@ export default function FinalCTA() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 bg-white border-2 border-[#1D1D1F] text-[#1D1D1F] rounded-full px-6 py-3 text-sm font-medium hover:bg-gray-50 transition-colors"
                         >
-                            <Smartphone size={16} />
-                            Get it on Android
+                            View Innovation Dashboard
                         </a>
                     </div>
                 </motion.div>
@@ -72,7 +70,7 @@ export default function FinalCTA() {
                         <div className="bg-[#1D1D1F] rounded-[2rem] p-2.5 shadow-2xl">
                             <div className="bg-white rounded-[1.5rem] overflow-hidden p-4">
                                 <div className="text-center mb-3">
-                                    <p className="text-[10px] text-text-muted">Total Month Streak Active</p>
+                                    <p className="text-[10px] text-text-muted">IEDC Innovation Dashboard</p>
                                     <div className="w-8 h-8 mx-auto mt-1">
                                         <svg viewBox="0 0 24 24" className="text-green-500 w-full h-full">
                                             <path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
@@ -82,28 +80,28 @@ export default function FinalCTA() {
                                 <div className="flex gap-3 mb-4">
                                     <div className="flex-1 bg-card-bg rounded-xl p-2 text-center">
                                         <div className="flex items-center justify-center gap-1">
-                                            <p className="font-bold text-lg">07</p>
+                                            <p className="font-bold text-lg">03</p>
                                             <div className="w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center text-[8px] text-primary font-bold">86%</div>
                                         </div>
-                                        <p className="text-[9px] text-text-muted">Today streak</p>
+                                        <p className="text-[9px] text-text-muted"> Active Projects</p>
                                     </div>
                                     <div className="flex-1 bg-card-bg rounded-xl p-2 text-center">
                                         <div className="flex items-center justify-center gap-1">
-                                            <p className="font-bold text-lg">32</p>
+                                            <p className="font-bold text-lg">12</p>
                                             <div className="w-5 h-5 rounded-full border-2 border-red-500 flex items-center justify-center text-[8px] text-red-500 font-bold">80%</div>
                                         </div>
-                                        <p className="text-[9px] text-text-muted">This Week streak</p>
+                                        <p className="text-[9px] text-text-muted">Events Attended</p>
                                     </div>
                                 </div>
                                 <div>
-                                    <p className="text-[12px] font-semibold mb-2">Today&apos;s routine</p>
+                                    <p className="text-[12px] font-semibold mb-2">Your Innovation Activity</p>
                                     <div className="space-y-2">
                                         <div className="flex items-center justify-between bg-card-bg rounded-lg p-2">
                                             <div className="flex items-center gap-2">
                                                 <div className="w-2 h-2 bg-green-500 rounded-full" />
                                                 <div>
-                                                    <p className="text-[10px] font-medium">Morning stretch</p>
-                                                    <p className="text-[8px] text-text-muted">Completed at 7:18 am</p>
+                                                    <p className="text-[10px] font-medium">Upcoming Bootcamp</p>
+                                                    <p className="text-[8px] text-text-muted">Startup Builder Bootcamp – Tomorrow</p>
                                                 </div>
                                             </div>
                                             <span className="text-[8px] text-green-600 bg-green-50 px-1.5 py-0.5 rounded-full">Today</span>
@@ -112,8 +110,8 @@ export default function FinalCTA() {
                                             <div className="flex items-center gap-2">
                                                 <div className="w-2 h-2 bg-orange-500 rounded-full" />
                                                 <div>
-                                                    <p className="text-[10px] font-medium">Focus block</p>
-                                                    <p className="text-[8px] text-text-muted">45 min deep work</p>
+                                                    <p className="text-[10px] font-medium">Project Update</p>
+                                                    <p className="text-[8px] text-text-muted">Smart Agriculture System – Prototype Phase</p>
                                                 </div>
                                             </div>
                                             <span className="text-[8px] text-orange-600 bg-orange-50 px-1.5 py-0.5 rounded-full">This afternoon</span>
@@ -153,9 +151,9 @@ export default function FinalCTA() {
                                 </div>
                             </div>
                             <p className="text-[11px] text-text-main font-medium text-center">
-                                Scan the QR code to
+                                Scan to access
                                 <br />
-                                download the app
+                                IEDC Student Portal
                             </p>
                         </div>
                     </motion.div>
