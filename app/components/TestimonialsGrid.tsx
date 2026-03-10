@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -57,6 +58,23 @@ const testimonials = [
 ];
 
 export default function TestimonialsGrid() {
+    const [showAll, setShowAll] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
+    const visibleItems = showAll
+        ? testimonials
+        : testimonials.slice(0, isMobile ? 3 : 6);
+
     return (
         <section className="py-20 md:py-32 max-w-6xl mx-auto px-6">
             <motion.div
@@ -106,7 +124,7 @@ export default function TestimonialsGrid() {
 
             {/* Masonry grid */}
             <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
-                {testimonials.map((t, i) => (
+                {visibleItems.map((t, i) => (
                     <motion.div
                         key={i}
                         variants={fadeInUp}
@@ -132,22 +150,25 @@ export default function TestimonialsGrid() {
             </div>
 
             {/* View all reviews button */}
-            <motion.div
-                variants={fadeInUp}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="flex justify-center mt-12"
-            >
-                <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-[#1D1D1F] text-white rounded-full px-8 py-3.5 text-sm font-semibold hover:bg-[#333] transition-colors"
+            {!showAll && (
+                <motion.div
+                    variants={fadeInUp}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="flex justify-center mt-12"
                 >
-                    View all Reviews
-                </motion.button>
-            </motion.div>
+                    <motion.button
+                        onClick={() => setShowAll(true)}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="bg-[#1D1D1F] text-white rounded-full px-8 py-3.5 text-sm font-semibold hover:bg-[#333] transition-colors"
+                    >
+                        View all Reviews
+                    </motion.button>
+                </motion.div>
+            )}
         </section>
     );
 }

@@ -105,7 +105,7 @@ export default function MetricsSection() {
                     whileInView="animate"
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mt-8"
+                    className="grid grid-cols-3 gap-2 md:gap-8 max-w-3xl mx-auto mt-8 px-2"
                 >
                     <div className="text-center">
                         <p className="text-4xl md:text-5xl font-bold text-primary">
