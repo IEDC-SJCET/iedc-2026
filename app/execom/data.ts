@@ -98,19 +98,9 @@ export const execomHistory: ExecomData[] = [
             }
         ]
     },
+
     {
         year: "25/26",
-        teamSections: [
-            {
-                title: "Core Team",
-                members: [
-                    { name: "Member A", role: "Dev", image: "" }
-                ]
-            },
-        ]
-    },
-    {
-        year: "24/25",
         leads: [
             {
                 name: "Sarju S",
@@ -141,7 +131,7 @@ export const execomHistory: ExecomData[] = [
             },
             {
                 name: "Tims Tittus",
-                role: "PR and Research Lead",
+                role: "IPR and Research Lead",
                 image: "/execom/24-25/tims.jpeg",
                 bio: "Managing public relations, research, and technical strategy.",
                 linkedin: "https://www.linkedin.com/in/tims-tittus-b4908b27b/",
@@ -219,6 +209,132 @@ export const execomHistory: ExecomData[] = [
                     { name: "Past Member X", role: "Lead", image: "" }
                 ]
             }
+        ]
+    },
+    {
+        year: "24/25",
+        leads: [
+            {
+                name: "Sarju S",
+                role: "IEDC Nodal Officer",
+                image: "",
+                bio: "Guiding the institution's innovation and entrepreneurship ecosystem.",
+                linkedin: "#",
+                email: "sarju@sjcetpalai.ac.in",
+                letter: "S"
+            },
+            {
+                name: "Liya Elizabeth Joseph",
+                role: "CEO",
+                image: "/execom/24-25/liya.webp",
+                linkedin: "https://www.linkedin.com/in/liya-joseph2123/",
+                email: "#",
+                letter: "L"
+            },
+            {
+                name: "Rajat Sandeep",
+                role: "CTO",
+                image: "/execom/24-25/RAJAT_CTO.webp",
+                linkedin: "https://www.linkedin.com/in/rajatsandeepsen/",
+                email: "#",
+                letter: "R"
+            },
+            {
+                name: "Alina Tresa Johnson",
+                role: "COO",
+                image: "/execom/24-25/ALINA_COO.webp",
+                linkedin: "https://www.linkedin.com/in/alina-tresa-johnson-525a5b27b/",
+                email: "#",
+                letter: "A"
+            },
+            {
+                name: "Goutham Sreeram S B",
+                role: "CCO",
+                image: "/execom/24-25/goutham.webp",
+                linkedin: "https://www.linkedin.com/in/goutham-sreeram-sb-2b7661241/",
+                email: "#",
+                letter: "C"
+            },
+            {
+                name: "Alvin Dennis",
+                role: "CFO",
+                image: "/execom/24-25/ALVIN_CFO.webp",
+                linkedin: "https://www.linkedin.com/in/alvindennis/",
+                email: "#",
+                letter: "A"
+            },
+            {
+                name: "Ayush Krishnan",
+                role: "CMO",
+                image: "/execom/24-25/AYUSH_CMO.webp",
+                linkedin: "https://www.linkedin.com/in/ayushkrishnanu/",
+                email: "#",
+                letter: "A"
+            },
+            {
+                name: "Jibin Gigi",
+                role: "CSO",
+                image: "/execom/24-25/AYUSH_CMO.webp",
+                linkedin: "https://www.linkedin.com/in/404-jibin-gigi/",
+                email: "#",
+                letter: "J"
+            },
+            {
+                name: "Aibel Bin Zachariah",
+                role: "CVO",
+                image: "/execom/24-25/AIBEL_CVO.webp",
+                linkedin: "https://www.linkedin.com/in/aibel-bin-zacariah-677660226/",
+                email: "#",
+                letter: "A"
+            },
+
+        ],
+        teamSections: [
+            {
+                title: "Technical Team",
+                members: [
+                    { name: "Milan Suman", role: "Technical Officer", image: "/execom/24-25/MILAN_TO.webp",linkedin: "https://www.linkedin.com/in/milan-suman-66234b25b/" },
+                    { name: "Jovit Mathew", role: "Technical Officer", image: "/execom/24-25/JOVIT_TO.webp",linkedin: "https://www.linkedin.com/in/jovit-mathew/" },
+                    { name: "Sanu K Joseph", role: "Technical Officer", image: "/execom/24-25/SANU_TO.webp",linkedin: "https://www.linkedin.com/in/sanu-k-joseph/" },
+                    { name: "Ashwin K O", role: "Technical Officer", image: "/execom/24-25/ASHWIN_TO.webp"}
+                ]
+            },
+            {
+                title: "Creative Team",
+                members: [
+                    { name: "Ashwin Sreenivasan", role: "Creative Officer", image: "/execom/24-25/ASHWIN_CO.webp",linkedin: "https://www.linkedin.com/in/ashwin-sreenivasan-04b96827b/" },
+                    { name: "Chris Alex", role: "Creative Officer", image: "/execom/24-25/CHRIS_CO.webp",linkedin: "https://www.linkedin.com/in/chris-oommen-alex/" },
+                    { name: "Joel Varghese", role: "Creative Officer", image: "/execom/24-25/joel_varghese.webp",linkedin: "https://www.linkedin.com/in/joel-varghese-/" },
+                    { name: "Pooja Shibu", role: "Creative Officer", image: "/execom/24-25/pooja_shibu.webp",linkedin: "https://www.linkedin.com/in/pooja-shibu-888654224/" },
+                    { name: "Ashwin Joseph A", role: "Creative Officer", image: "/execom/24-25/ashwin_CO(1).webp",linkedin: "https://www.linkedin.com/in/ashwin-joseph-a-922884353/" },
+                ]
+            },
+            {
+                title: "Operations Team",
+                members: [
+                    { name: "Eilin Kennedy", role: "Operating Officer", image: "/execom/24-25/EILIN_OO.webp",linkedin: "https://www.linkedin.com/in/eilin-kennedy-97ba47291/" },
+                    { name: "Vasudev Nair P", role: "Operating Officer", image: "/execom/24-25/JOVIT_TO.webp",linkedin: "https://www.linkedin.com/in/vasudevnairp/" },
+                ]
+            },
+            {
+                title: "Skills Team",
+                members: [
+                    { name: "Andrea Tresa Tom", role: "Skills Officer", image: "/execom/24-25/ANDREA_SO.webp",linkedin: "https://www.linkedin.com/in/andreatresatom/" },
+                    { name: "Basil Vazhathottathil", role: "Skills Officer", image: "/execom/24-25/BASIL_SO.webp",linkedin: "https://www.linkedin.com/in/basil-vazhathottathil/" },
+                ]
+            },
+            {
+                title: "Marketing Team",
+                members: [
+                    { name: "Sneha Prasanth", role: "Marketing Officer", image: "/execom/24-25/sneha_prasanth.webp",linkedin: "https://www.linkedin.com/in/snehaprasanth/" },
+                ]
+            },
+            {
+                title: "Vibes Team",
+                members: [
+                    { name: "Angel Maria", role: "Vibes Officer", image: "/execom/24-25/ANGEL_VO.webp",linkedin: "https://www.linkedin.com/in/angel-maria-5474302b1/" },
+                ]
+            },
         ]
     },
     {
@@ -345,6 +461,115 @@ export const execomHistory: ExecomData[] = [
                     { name: "Alby Joseph", role: "Finance Officer", image: "/execom/23-24/alby_joseph.png", linkedin: "https://www.linkedin.com/in/alby-joseph-2925aa247/" }
                 ]
             }
+        ]
+    },
+    {
+        year: "22/23",
+        leads: [
+            {
+                name: "Sarju S",
+                role: "IEDC Nodal Officer",
+                image: "",
+                bio: "Guiding the institution's innovation and entrepreneurship ecosystem.",
+                linkedin: "#",
+                email: "sarju@sjcetpalai.ac.in",
+                letter: "S"
+            },
+            {
+                name: "Arun Alex",
+                role: "CEO",
+                email: "#",
+                letter: "A"
+            },
+            {
+                name: "Rajat Mathew",
+                role: "CTO",
+                email: "#",
+                letter: "R"
+            },
+            {
+                name: "Sreelakshnmi Madhu",
+                role: "COO",
+                email: "#",
+                letter: "S"
+            },
+            {
+                name: "Rahul  Surendran",
+                role: "CCO",
+                email: "#",
+                letter: "R"
+            },
+            {
+                name: "Abhijith E S",
+                role: "CFO",
+                email: "#",
+                letter: "A"
+            },
+            {
+                name: "Jeiddon  Grill Shajan",
+                role: "CMO",
+                email: "#",
+                letter: "J"
+            },
+            {
+                name: "Jerin Jacob",
+                role: "CSO",
+                email: "#",
+                letter: "J"
+            },
+
+        ],
+        teamSections: [
+            {
+                title: "Technical Team",
+                members: [
+                    { name: "Rajath Sandeep", role: "Technical Officer" },
+                    { name: "Jovit Mathew", role: "Technical Officer" },
+                ]
+            },
+            {
+                title: "Creative Team",
+                members: [
+                    { name: "Anto Sabastain", role: "Creative Officer", image: "/execom/24-25/ASHWIN_CO.webp",linkedin: "https://www.linkedin.com/in/ashwin-sreenivasan-04b96827b/" },
+                    { name: "Anand Krishna", role: "Creative Officer", image: "/execom/24-25/CHRIS_CO.webp",linkedin: "https://www.linkedin.com/in/chris-oommen-alex/" },
+                    { name: "Mubeena S", role: "Creative Officer", image: "/execom/24-25/joel_varghese.webp",linkedin: "https://www.linkedin.com/in/joel-varghese-/" },
+                ]
+            },
+            {
+                title: "Operations Team",
+                members: [
+                    { name: "Eilin Kennedy", role: "Operating Officer", image: "/execom/24-25/EILIN_OO.webp",linkedin: "https://www.linkedin.com/in/eilin-kennedy-97ba47291/" },
+                    { name: "Vasudev Nair P", role: "Operating Officer", image: "/execom/24-25/JOVIT_TO.webp",linkedin: "https://www.linkedin.com/in/vasudevnairp/" },
+                ]
+            },
+            {
+                title: "Skills Team",
+                members: [
+                    { name: "Devanandha S", role: "Skills Officer" },
+                    { name: "Jesvin C Jess", role: "Skills Officer"},
+                    { name: "Melissa Manoj Thondoli", role: "Skills Officer"},
+                ]
+            },
+            {
+                title: "Marketing Team",
+                members: [
+                    { name: "Vishnu CR", role: "Marketing Officer" },
+                    { name: "Nikhil Jose", role: "Marketing Officer" },
+                    { name: "Delna K Jose", role: "Marketing Officer" },
+                ]
+            },
+            {
+                title: "Vibes Team",
+                members: [
+                    { name: "Angel Maria", role: "Vibes Officer", image: "/execom/24-25/ANGEL_VO.webp",linkedin: "https://www.linkedin.com/in/angel-maria-5474302b1/" },
+                ]
+            },
+            {
+                title: "Fiance Team",
+                members: [
+                    { name: "Deena Maria jimson", role: "Finance Officer" },
+                ]
+            },
         ]
     },
     {
