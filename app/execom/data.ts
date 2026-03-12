@@ -553,22 +553,23 @@ export const execomHistory: ExecomData[] = [
                 title: "Technical Team",
                 members: [
                     { name: "Rajath Sandeep", role: "Technical Officer", image:"",  linkedin:"#" },
-                    { name: "Jovit Mathew", role: "Technical Officer", image:"",linkedin:"#" },
+                    { name: "Alvin Dennis", role: "Technical Officer", image:"",linkedin:"#" },
                 ]
             },
             {
                 title: "Creative Team",
                 members: [
-                    { name: "Anto Sabastain", role: "Creative Officer", image: "/execom/24-25/ASHWIN_CO.webp",linkedin: "https://www.linkedin.com/in/ashwin-sreenivasan-04b96827b/" },
-                    { name: "Anand Krishna", role: "Creative Officer", image: "/execom/24-25/CHRIS_CO.webp",linkedin: "https://www.linkedin.com/in/chris-oommen-alex/" },
-                    { name: "Mubeena S", role: "Creative Officer", image: "/execom/24-25/joel_varghese.webp",linkedin: "https://www.linkedin.com/in/joel-varghese-/" },
+                    { name: "Anto Sabastain", role: "Creative Officer", image: "",linkedin: "" },
+                    { name: "Anand Krishna", role: "Creative Officer", image: "",linkedin: "" },
+                    { name: "Mubeena S", role: "Creative Officer", image: "",linkedin: "" },
                 ]
             },
             {
                 title: "Operations Team",
                 members: [
-                    { name: "Eilin Kennedy", role: "Operating Officer", image: "/execom/24-25/EILIN_OO.webp",linkedin: "https://www.linkedin.com/in/eilin-kennedy-97ba47291/" },
-                    { name: "Vasudev Nair P", role: "Operating Officer", image: "/execom/24-25/JOVIT_TO.webp",linkedin: "https://www.linkedin.com/in/vasudevnairp/" },
+                    { name: "Anu Rajesh", role: "Operating Officer", image: "",linkedin: "" },
+                    { name: "Kennith Joseph", role: "Operating Officer", image: "",linkedin: "" },
+                    { name: "Harichand M Ramesh", role: "Operating Officer", image: "",linkedin: "" },
                 ]
             },
             {
@@ -588,17 +589,135 @@ export const execomHistory: ExecomData[] = [
                 ]
             },
             {
-                title: "Vibes Team",
-                members: [
-                    { name: "Angel Maria", role: "Vibes Officer", image: "/execom/24-25/ANGEL_VO.webp",linkedin: "https://www.linkedin.com/in/angel-maria-5474302b1/" },
-                ]
-            },
-            {
-                title: "Fiance Team",
+                title: "Finance Team",
                 members: [
                     { name: "Deena Maria jimson", role: "Finance Officer", image:"",linkedin:"#" },
                 ]
             },
+        ]
+    },
+    {
+        year: "21/22",
+        leads: [
+            {
+                name: "Sarju S",
+                role: "IEDC Nodal Officer",
+                image: "",
+                bio: "Guiding the institution's innovation and entrepreneurship ecosystem.",
+                linkedin: "#",
+                email: "sarju@sjcetpalai.ac.in",
+                letter: "S"
+            },
+            {
+                name: "Arun Alex",
+                role: "IEDC Lead",
+                email: "#",
+                letter: "A",
+                bio: "",
+                linkedin: "#",
+                image: ""
+            },
+            {
+                name: "Tom Thomas",
+                role: "CTO",
+                email: "#",
+                letter: "T",
+                bio: "",
+                linkedin: "#",
+                image: ""
+            },
+            {
+                name: "Merin Alex",
+                role: "COO",
+                email: "#",
+                letter: "M",
+                bio: "",
+                linkedin: "https://www.linkedin.com/in/merinalex23/",
+                image: "/execom/21-22/Merin_Alex.webp"
+            },
+            {
+                name: "Joe Martin",
+                role: "CCO",
+                email: "#",
+                letter: "J",
+                bio: "",
+                linkedin: "https://www.linkedin.com/in/joe-martin-4685351b6/",
+                image: "/execom/21-22/Joe_Martin.webp"
+            },
+            {
+                name: "Sandra Pramod",
+                role: "CFO",
+                email: "#",
+                letter: "S",
+                bio: "",
+                linkedin: "https://www.linkedin.com/in/sandrapramod/",
+                image: "/execom/21-22/sandra_pramode.webp"
+            },
+            {
+                name: "Parvathy S Nath",
+                role: "CMO",
+                email: "#",
+                letter: "J",
+                bio: "",
+                linkedin: "https://www.linkedin.com/in/parvathy-s-nath/",
+                image: "/execom/21-22/Parvathy_S_Nath.webp"
+            },
+            {
+                name: "Rahul Surendran",
+                role: "Design Lead",
+                email: "#",
+                letter: "R",
+                bio: "",
+                linkedin: "https://www.linkedin.com/in/rahul-surendran-a749461aa/",
+                image: ""
+            },
+            {
+                name: "Anna Thomas",
+                role: "Community Lead",
+                email: "#",
+                letter: "A",
+                bio: "",
+                linkedin: "https://www.linkedin.com/in/theannathomas/",
+                image: "/execom/21-22/Anna_Thomas.webp"
+            },
+            
+
+            
+        ],
+        teamSections: [
+            {
+                title: "IPR Coordinator",
+                members: [
+                    {
+                        name: "Jaidon Gill Shajan",
+                        role: "IPR Coordinator",
+                        linkedin: "https://www.linkedin.com/in/jaidon-gill-shajan/",
+                        image: "/execom/21-22/Jaidon_Gill.webp"
+                    },
+                ]
+            },
+            {
+                title: "Internship Coordinator",
+                members: [
+                    {
+                        name: "Sidharth Ganesh",
+                        role: "Internship Coordinator",
+                        linkedin: "",
+                        image: ""
+                    },
+                ]
+            },
+            {
+                title: "Community Team",
+                members: [
+                    {
+                        name: "Albin Sebastian",
+                        role: "Co Lead",
+                        linkedin: "",
+                        image: ""
+                    },
+                ]
+            }
         ]
     },
     {
