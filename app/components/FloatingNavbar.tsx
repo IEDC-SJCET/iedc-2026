@@ -6,9 +6,10 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
 const navLinks = [
+    { label: "Home", href: "/" },
     { label: "About IEDC", href: "/#about" },
     { label: "Events", href: "/#events" },
-    { label: "Startups", href: "/events" },
+    // { label: "Startups", href: "/events" },
     { label: "Execom", href: "/execom" },
 
 ];
@@ -95,32 +96,57 @@ const FloatingNavbar = memo(function FloatingNavbar() {
                 </div>
             </motion.nav>
 
-            {/* Mobile Menu */}
+            {/* Mobile Menu Backdrop & Drawer */}
             <AnimatePresence>
                 {mobileOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.2 }}
-                        className="fixed top-20 left-4 right-4 z-50 glass rounded-2xl border border-white/20 shadow-xl p-4"
-                    >
-                        <div className="flex flex-col gap-1">
-                            {navLinks.map((link) => (
-                                <a
-                                    key={link.href}
-                                    href={link.href}
+                    <>
+                        {/* Backdrop */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setMobileOpen(false)}
+                            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] md:hidden"
+                        />
+
+                        {/* Drawer */}
+                        <motion.div
+                            initial={{ x: "100%" }}
+                            animate={{ x: 0 }}
+                            exit={{ x: "100%" }}
+                            transition={{ type: "spring", damping: 30, stiffness: 200 }}
+                            className="fixed right-0 top-0 bottom-0 w-[300px] bg-[#111] z-[101] p-8 shadow-2xl flex flex-col md:hidden"
+                        >
+                            <div className="flex justify-end mb-8">
+                                <button
                                     onClick={() => setMobileOpen(false)}
-                                    className={`px-4 py-3 text-[15px] font-medium rounded-xl transition-all ${activeSection === link.href
-                                        ? "bg-[#1D1D1F] text-white"
-                                        : "text-text-muted hover:bg-gray-100 hover:text-text-main"
-                                        }`}
+                                    className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors text-white"
                                 >
-                                    {link.label}
-                                </a>
-                            ))}
-                        </div>
-                    </motion.div>
+                                    <X size={20} />
+                                </button>
+                            </div>
+
+                            <div className="flex flex-col gap-2">
+                                {navLinks.map((link) => (
+                                    <a
+                                        key={link.href}
+                                        href={link.href}
+                                        onClick={() => setMobileOpen(false)}
+                                        className={`px-6 py-4 text-lg font-bold rounded-2xl transition-all ${activeSection === link.href
+                                            ? "bg-[#FF7A00] text-black"
+                                            : "text-white/70 hover:bg-white/5 hover:text-white"
+                                            }`}
+                                    >
+                                        {link.label}
+                                    </a>
+                                ))}
+                            </div>
+
+                            <div className="mt-auto pt-8 border-t border-white/10 text-white/30 text-xs font-bold tracking-widest uppercase">
+                                IEDC SJCET © 2026
+                            </div>
+                        </motion.div>
+                    </>
                 )}
             </AnimatePresence>
         </>

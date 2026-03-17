@@ -112,7 +112,7 @@ export default function LoginPage() {
                                 <LogIn className="text-white w-4 h-4 md:w-[18px] md:h-[18px]" />
                             </div>
                             <span className="text-black text-base md:text-lg font-black uppercase tracking-tighter">
-                                Enter Student Portal
+                                Coming Soon
                             </span>
                             <ArrowRight className="text-black group-hover:translate-x-1 transition-transform w-4 h-4 md:w-5 md:h-5" />
                         </Link>
