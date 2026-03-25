@@ -235,7 +235,7 @@ export const execomHistory: ExecomData[] = [
             {
                 name: "Sarju S",
                 role: "IEDC Nodal Officer",
-                image: "",
+                image: "/execom/26-27/Sarju S.png",
                 bio: "Guiding the institution's innovation and entrepreneurship ecosystem.",
                 linkedin: "#",
                 email: "sarju@sjcetpalai.ac.in",
@@ -347,7 +347,7 @@ export const execomHistory: ExecomData[] = [
             {
                 name: "Sarju S",
                 role: "IEDC Nodal Officer",
-                image: "",
+                image: "/execom/26-27/Sarju S.png",
                 bio: "Guiding the institution's innovation and entrepreneurship ecosystem.",
                 linkedin: "#",
                 email: "sarju@sjcetpalai.ac.in",
@@ -607,7 +607,7 @@ export const execomHistory: ExecomData[] = [
             {
                 name: "Sarju S",
                 role: "IEDC Nodal Officer",
-                image: "",
+                image: "/execom/26-27/Sarju S.png",
                 bio: "Guiding the institution's innovation and entrepreneurship ecosystem.",
                 linkedin: "#",
                 email: "sarju@sjcetpalai.ac.in",
@@ -682,24 +682,24 @@ export const execomHistory: ExecomData[] = [
             {
                 title: "Technical Team",
                 members: [
-                    { name: "Rajath Sandeep", role: "Technical Officer", image:"",  linkedin:"#" },
-                    { name: "Alvin Dennis", role: "Technical Officer", image:"",linkedin:"#" },
+                    { name: "Rajath Sandeep", role: "Technical Officer", image: "", linkedin: "#" },
+                    { name: "Alvin Dennis", role: "Technical Officer", image: "", linkedin: "#" },
                 ]
             },
             {
                 title: "Creative Team",
                 members: [
-                    { name: "Anto Sabastain", role: "Creative Officer", image: "",linkedin: "" },
-                    { name: "Anand Krishna", role: "Creative Officer", image: "",linkedin: "" },
-                    { name: "Mubeena S", role: "Creative Officer", image: "",linkedin: "" },
+                    { name: "Anto Sabastain", role: "Creative Officer", image: "", linkedin: "" },
+                    { name: "Anand Krishna", role: "Creative Officer", image: "", linkedin: "" },
+                    { name: "Mubeena S", role: "Creative Officer", image: "", linkedin: "" },
                 ]
             },
             {
                 title: "Operations Team",
                 members: [
-                    { name: "Anu Rajesh", role: "Operating Officer", image: "",linkedin: "" },
-                    { name: "Kennith Joseph", role: "Operating Officer", image: "",linkedin: "" },
-                    { name: "Harichand M Ramesh", role: "Operating Officer", image: "",linkedin: "" },
+                    { name: "Anu Rajesh", role: "Operating Officer", image: "", linkedin: "" },
+                    { name: "Kennith Joseph", role: "Operating Officer", image: "", linkedin: "" },
+                    { name: "Harichand M Ramesh", role: "Operating Officer", image: "", linkedin: "" },
                 ]
             },
             {
@@ -721,7 +721,7 @@ export const execomHistory: ExecomData[] = [
             {
                 title: "Finance Team",
                 members: [
-                    { name: "Deena Maria jimson", role: "Finance Officer", image:"",linkedin:"#" },
+                    { name: "Deena Maria jimson", role: "Finance Officer", image: "", linkedin: "#" },
                 ]
             },
         ]
@@ -732,7 +732,7 @@ export const execomHistory: ExecomData[] = [
             {
                 name: "Sarju S",
                 role: "IEDC Nodal Officer",
-                image: "",
+                image: "/execom/26-27/Sarju S.png",
                 bio: "Guiding the institution's innovation and entrepreneurship ecosystem.",
                 linkedin: "#",
                 email: "sarju@sjcetpalai.ac.in",
@@ -810,9 +810,9 @@ export const execomHistory: ExecomData[] = [
                 linkedin: "https://www.linkedin.com/in/theannathomas/",
                 image: "/execom/21-22/Anna_Thomas.webp"
             },
-            
 
-            
+
+
         ],
         teamSections: [
             {
