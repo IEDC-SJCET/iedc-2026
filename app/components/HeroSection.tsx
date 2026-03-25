@@ -35,23 +35,18 @@ const HeroSection = memo(function HeroSection() {
                     <div className="absolute inset-0 bg-gradient-to-br from-[#110A05]/90 via-[#4A1D00]/70 to-[#FF7A00]/50 mix-blend-multiply" />
                     <div className="absolute inset-0 bg-black/20" />
 
-                    <div className="absolute top-1/4 left-1/4 -translate-x-1/2 w-[600px] h-[600px] bg-[#FF7A00]/40 rounded-full blur-[120px] will-change-[transform,opacity]" />
-                    <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-[#FF5500]/40 rounded-full blur-[100px] will-change-[transform,opacity]" />
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#FF7A00]/5 rounded-full blur-[120px] will-change-[transform,opacity]" />
+                    <div className="absolute top-1/4 left-1/4 -translate-x-1/2 w-[600px] h-[600px] bg-[#FF7A00]/40 rounded-full blur-[80px]" />
+                    <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-[#FF5500]/40 rounded-full blur-[60px]" />
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#FF7A00]/5 rounded-full blur-[80px]" />
                 </div>
 
 
                 <div className="absolute bottom-0 left-0 w-full z-0 flex flex-col justify-end h-[400px]">
-                    {/* Massive blur glow behind curve */}
-                    <div className="absolute bottom-20 left-1/2 -translate-x-1/2 w-[120%] max-w-[2000px] h-[250px] bg-[#FFFAF8] opacity-60 blur-[60px] rounded-[100%]" />
+                    {/* Simplified glow behind curve */}
+                    <div className="absolute bottom-20 left-1/2 -translate-x-1/2 w-[120%] max-w-[2000px] h-[250px] bg-[#FFFAF8] opacity-40 blur-[40px] rounded-[100%]" />
 
                     {/* Solid curve */}
                     <svg viewBox="0 0 1440 320" preserveAspectRatio="none" className="block w-full h-[150px] md:h-[220px] relative z-10 bottom-[-2px]">
-                        <path
-                            fill="rgba(255,255,255,0.4)"
-                            className="blur-xl"
-                            d="M0,80 C480,280 960,280 1440,80 L1440,320 L0,320 Z"
-                        />
                         <path
                             fill="#FFFAF8"
                             d="M0,120 C480,300 960,300 1440,120 L1440,320 L0,320 Z"
