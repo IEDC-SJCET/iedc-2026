@@ -254,7 +254,7 @@ function PastExecomContent() {
                                                     </div>
                                                 </div>
                                                 <div className="md:hidden">
-                                                    <div className="overflow-x-auto hide-scrollbar px-6 flex gap-6 snap-x snap-mandatory pb-4">
+                                                    <div className="overflow-x-auto overflow-y-hidden no-scrollbar px-6 flex gap-6 snap-x snap-mandatory pb-4">
                                                         {section.members.map((member, mIndex) => (
                                                             <div key={`${selectedYear}-${mIndex}`} className="min-w-[280px] snap-center">
                                                                 <TeamMemberCard

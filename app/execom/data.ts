@@ -219,11 +219,11 @@ export const execomHistory: ExecomData[] = [
                 ]
             },
             {
-                title: "Viber Team",
+                title: "Vibes Team",
                 members: [
-                    { name: "Ben Jacob Mathew", role: "Viber Officer", image: "/execom/26-27/Ben.jpg", linkedin: "#" },
-                    { name: "Indhu Subash", role: "Viber Officer", image: "/execom/26-27/Indhu Subash.png", linkedin: "#" },
-                    { name: "Athira S Kumar", role: "Viber Officer", image: "/execom/26-27/Athira S Kumar.jpg", linkedin: "#" }
+                    { name: "Ben Jacob Mathew", role: "Vibes Officer", image: "/execom/26-27/Ben.jpg", linkedin: "#" },
+                    { name: "Indhu Subash", role: "Vibes Officer", image: "/execom/26-27/Indhu Subash.png", linkedin: "#" },
+                    { name: "Athira S Kumar", role: "Vibes Officer", image: "/execom/26-27/Athira S Kumar.jpg", linkedin: "#" }
                 ]
             }
         ]

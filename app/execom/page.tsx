@@ -39,20 +39,20 @@ export default function ExecomPage() {
     return (
         <main className="relative min-h-screen text-black overflow-hidden bg-[#FFFAF8]">
             <div className="fixed inset-0 z-0 select-none pointer-events-none">
-        <div className="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] bg-[#FF7A00]/15 rounded-full blur-[80px]" />
-        <div className="absolute inset-0 flex items-center justify-center overflow-hidden text-black/[0.015]">
-            <h2 className="text-[35vw] font-black leading-none tracking-tighter select-none uppercase">
-                EXECOM
-            </h2>
-        </div>
-        <div className="absolute top-0 right-0 w-[50%] h-[30%] bg-[#FF7A00]/10 rounded-full blur-[60px] -rotate-12" />
-        <div className="absolute bottom-[5%] left-[5%] w-[40%] h-[40%] bg-[#FF7A00]/10 rounded-full blur-[80px]" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-black/[0.02] rounded-full blur-[80px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] h-[40%] bg-[#FF7A00]/5 rounded-full blur-[60px]" />
-        <div className="absolute inset-0 opacity-[0.05] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-multiply" />
-    </div>
+                <div className="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] bg-[#FF7A00]/15 rounded-full blur-[80px]" />
+                <div className="absolute inset-0 flex items-center justify-center overflow-hidden text-black/[0.015]">
+                    <h2 className="text-[35vw] font-black leading-none tracking-tighter select-none uppercase">
+                        EXECOM
+                    </h2>
+                </div>
+                <div className="absolute top-0 right-0 w-[50%] h-[30%] bg-[#FF7A00]/10 rounded-full blur-[60px] -rotate-12" />
+                <div className="absolute bottom-[5%] left-[5%] w-[40%] h-[40%] bg-[#FF7A00]/10 rounded-full blur-[80px]" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-black/[0.02] rounded-full blur-[80px]" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] h-[40%] bg-[#FF7A00]/5 rounded-full blur-[60px]" />
+                <div className="absolute inset-0 opacity-[0.05] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-multiply" />
+            </div>
 
-    <div className="relative z-10 bg-white/30 backdrop-blur-md min-h-screen">
+            <div className="relative z-10 bg-white/30 backdrop-blur-md min-h-screen">
                 <FloatingNavbar />
 
                 <section className="pt-48 pb-20 px-6 relative overflow-hidden">
@@ -164,7 +164,7 @@ export default function ExecomPage() {
                                 </div>
                             </div>
                             <div className="md:hidden">
-                                <div className="overflow-x-auto hide-scrollbar px-6 flex gap-6 snap-x snap-mandatory pb-4">
+                                <div className="overflow-x-auto overflow-y-hidden no-scrollbar px-6 flex gap-6 snap-x snap-mandatory pb-4">
                                     {section.members.map((member, mIndex) => (
                                         <div key={mIndex} className="min-w-[280px] snap-center">
                                             <TeamMemberCard

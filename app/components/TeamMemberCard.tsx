@@ -69,7 +69,7 @@ export function TeamMemberCard({ member, index, onSelect, isTapped = false, onTa
 
             {/* Orange Hover/Tap Overlay Content */}
             <div
-                className={`absolute inset-0 z-30 bg-[#FF7A00] p-8 flex flex-col justify-between transition-transform duration-500 ease-[0.16, 1, 0.3, 1] ${isTapped ? 'translate-y-0' : 'translate-y-full group-hover:translate-y-0'
+                className={`absolute inset-0 z-30 bg-[#FF7A00] p-8 flex flex-col justify-between overflow-hidden transition-transform duration-500 ease-[0.16, 1, 0.3, 1] ${isTapped ? 'translate-y-0' : 'translate-y-full group-hover:translate-y-0'
                     }`}
             >
                 <div>
