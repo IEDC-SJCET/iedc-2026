@@ -24,24 +24,6 @@ export const execomHistory: ExecomData[] = [
         year: "26/27",
         leads: [
             {
-                name: "Yadhu krishna",
-                role: "CEO",
-                image: "/execom/26-27/Yadukrishna Hari.png",
-                bio: "Leading innovation and entrepreneurship initiatives at SJCET.",
-                linkedin: "#",
-                email: "yadu@sjcetpalai.ac.in",
-                letter: "C"
-            },
-            {
-                name: "Avantika S",
-                role: "CEO",
-                image: "/execom/26-27/avantika.png",
-                bio: "Leading innovation and entrepreneurship initiatives at SJCET.",
-                linkedin: "#",
-                email: "avantika@sjcetpalai.ac.in",
-                letter: "C"
-            },
-            {
                 name: "Sarju S",
                 role: "Nodal Officer",
                 image: "/execom/26-27/Sarju S.png",
@@ -58,6 +40,24 @@ export const execomHistory: ExecomData[] = [
                 linkedin: "#",
                 email: "sabarinath@sjcetpalai.ac.in",
                 letter: "P"
+            },
+            {
+                name: "Yadhu krishna",
+                role: "CEO",
+                image: "/execom/26-27/Yadukrishna Hari.png",
+                bio: "Leading innovation and entrepreneurship initiatives at SJCET.",
+                linkedin: "#",
+                email: "yadu@sjcetpalai.ac.in",
+                letter: "C"
+            },
+            {
+                name: "Avantika S",
+                role: "CEO",
+                image: "/execom/26-27/avantika.png",
+                bio: "Leading innovation and entrepreneurship initiatives at SJCET.",
+                linkedin: "#",
+                email: "avantika@sjcetpalai.ac.in",
+                letter: "C"
             },
             {
                 name: "Christina George",
@@ -142,6 +142,13 @@ export const execomHistory: ExecomData[] = [
             }
         ],
         teamSections: [
+            {
+                title: "",
+                members: [
+                    { name: "Sarju S", role: "Nodal Officer", image: "/execom/26-27/Sarju S.png", linkedin: "#" },
+                    { name: "Sabarinath G Pillai", role: "President", image: "/execom/26-27/Sabarinath.png", linkedin: "#" },
+                ]
+            },
             {
                 title: "Tech Team",
                 members: [

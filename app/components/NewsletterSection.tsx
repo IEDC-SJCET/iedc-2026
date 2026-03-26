@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, memo } from "react";
+import { useState, memo, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FileText, X, ExternalLink } from "lucide-react";
+import { FileText, X, ExternalLink, Loader2 } from "lucide-react";
 
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -11,6 +11,65 @@ const fadeInUp = {
 
 const NewsletterSection = memo(function NewsletterSection() {
     const [isViewerOpen, setIsViewerOpen] = useState(false);
+    const canvasRef = useRef<HTMLCanvasElement>(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [hasError, setHasError] = useState(false);
+
+    useEffect(() => {
+        let isMounted = true;
+
+        async function initPdf() {
+            try {
+                // Load PDF.js from CDN
+                const script = document.createElement("script");
+                script.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+                script.onload = async () => {
+                    if (!isMounted) return;
+
+                    const pdfjsLib = (window as any).pdfjsLib;
+                    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+                    try {
+                        const loadingTask = pdfjsLib.getDocument("/newsletter.pdf");
+                        const pdf = await loadingTask.promise;
+                        const page = await pdf.getPage(1);
+                        const viewport = page.getViewport({ scale: 1.5 });
+
+                        if (!isMounted || !canvasRef.current) return;
+
+                        const canvas = canvasRef.current;
+                        const context = canvas.getContext("2d");
+                        canvas.height = viewport.height;
+                        canvas.width = viewport.width;
+
+                        const renderContext = {
+                            canvasContext: context,
+                            viewport: viewport,
+                        };
+
+                        await page.render(renderContext).promise;
+                        setIsLoading(false);
+                    } catch (err) {
+                        console.error("PDF loading error:", err);
+                        if (isMounted) {
+                            setHasError(true);
+                            setIsLoading(false);
+                        }
+                    }
+                };
+                document.head.appendChild(script);
+            } catch (err) {
+                console.error("Script loading error:", err);
+                if (isMounted) {
+                    setHasError(true);
+                    setIsLoading(false);
+                }
+            }
+        }
+
+        initPdf();
+        return () => { isMounted = false; };
+    }, []);
 
     return (
         <>
@@ -61,13 +120,25 @@ const NewsletterSection = memo(function NewsletterSection() {
                                 onClick={() => setIsViewerOpen(true)}
                                 className="group relative cursor-pointer"
                             >
-                                <div className="relative aspect-[3/4] rounded-none overflow-hidden bg-[#1D1D1F] border border-black/10 shadow-2xl shadow-black/10 transition-transform duration-500 group-hover:scale-[1.02]">
-                                    {/* PDF iframe preview*/}
-                                    <div className="absolute inset-0 overflow-hidden">
-                                        <iframe
-                                            src="/newsletter.pdf#page=1&view=FitH&toolbar=0&navpanes=0&scrollbar=0"
-                                            className="absolute w-full h-[120%] -top-[10%] pointer-events-none"
-                                            title="IEDC Newsletter Preview"
+                                <div className="relative aspect-[3/4] rounded-none overflow-hidden bg-[#1D1D1F] border border-black/10 shadow-2xl shadow-black/10 transition-transform duration-500 group-hover:scale-[1.02] flex items-center justify-center">
+                                    {/* PDF canvas preview */}
+                                    <div className="absolute inset-0 overflow-hidden flex items-center justify-center bg-gray-900">
+                                        {isLoading && (
+                                            <div className="flex flex-col items-center gap-2">
+                                                <Loader2 className="animate-spin text-[#FF7A00]" size={32} />
+                                                <p className="text-xs text-white/50 animate-pulse">Loading Preview...</p>
+                                            </div>
+                                        )}
+                                        {hasError && (
+                                            <div className="text-center p-8">
+                                                <FileText size={48} className="text-white/20 mx-auto mb-4" />
+                                                <p className="text-sm text-white/40">Front page preview unavailable</p>
+                                                <p className="text-xs text-white/20 mt-1 italic">(Click to open viewer)</p>
+                                            </div>
+                                        )}
+                                        <canvas
+                                            ref={canvasRef}
+                                            className={`w-full h-full object-cover transition-opacity duration-500 ${isLoading ? "opacity-0" : "opacity-100"}`}
                                         />
                                     </div>
 

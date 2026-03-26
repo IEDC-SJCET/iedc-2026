@@ -91,7 +91,6 @@ export default function MetricsSection() {
                     className="relative flex justify-center my-12"
                 >
                     <div className="relative w-full max-w-2xl h-[400px] md:h-[600px] flex items-center justify-center">
-                        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent to-[#FFFAF8] z-40" />
                         <div className="relative h-full w-full z-10 p-2 md:p-6 drop-shadow-2xl">
                             <Globe />
                         </div>
