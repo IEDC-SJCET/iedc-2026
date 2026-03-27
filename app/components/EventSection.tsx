@@ -12,9 +12,51 @@ const fadeInUp = {
 
 const events = [
     {
+        title: "InnovateHer",
+        date: "09-03-2026",
+        status: "EXPIRED",
+        image: "/events/InnovateHer.jpeg",
+    },
+    {
+        title: "Kottayam Cluster Level Hackathon",
+        date: "14-02-2026",
+        status: "EXPIRED",
+        image: "/events/KTMCLUSTERHCKTHN.jpeg",
+    },
+    {
+        title: "Wednesday Cafe - 18.02.2026",
+        date: "18-02-2026",
+        status: "EXPIRED",
+        image: "/events/WEDCAFE1802.jpeg",
+    },
+    {
+        title: "Wednesday Cafe - 11.02.2026",
+        date: "11-02-2026",
+        status: "EXPIRED",
+        image: "/events/WEDCAFE1102.jpeg",
+    },
+    {
+        title: "RELEVANT",
+        date: "06, 07 Feb 2026",
+        status: "EXPIRED",
+        image: "/events/RELEVANT.jpeg",
+    },
+    {
+        title: "Ui/Ux Week",
+        date: "Jan 19-23 2026",
+        status: "EXPIRED",
+        image: "/events/UiUxWeek.jpeg",
+    },
+    {
+        title: "Smart India Hackathon 2025",
+        date: "09-08-2025",
+        status: "EXPIRED",
+        image: "/events/SIH25.jpeg",
+    },
+    {
         title: "Prayana - Alumni Entrepreneur Meetup",
         date: "23-08-2025",
-        status: "OPEN NOW",
+        status: "EXPIRED",
         image: "/events/PRAYANA2025.jpg",
     },
     {
@@ -36,7 +78,7 @@ const events = [
         image: "/events/INSENDIUM10.0.jpg",
     },
     {
-        title: "Techy Podia",
+        title: "Techy Pedia",
         date: "31-07-2025",
         status: "EXPIRED",
         image: "/events/Techypedia.jpg",

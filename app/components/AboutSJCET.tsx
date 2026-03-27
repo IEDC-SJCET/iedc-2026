@@ -33,7 +33,7 @@ const AboutSJCET = memo(function AboutSJCET() {
                         SJCET BOOTCAMP - <span className="text-[#FF6B4A]">IEDC</span>
                     </h2>
                     <p className="text-gray-600 text-lg md:text-xl leading-relaxed font-medium max-w-4xl text-justify">
-                        IEDC SJCET Bootcamp is a student community at St. Joseph’s College of Engineering and Technology, Palai, functioning under Kerala Startup Mission (KSUM). It promotes innovation, technology and entrepreneurship through workshops, hackathons, mentorship, and collaborative initiatives, creating a space where students develop skills, explore ideas, and build impactful solutions.
+                        SJCET Bootcamp – IEDC is a student-driven innovation and entrepreneurship hub of St. Joseph’s College of Engineering and Technology, Palai, functioning under Kerala Startup Mission (KSUM). We empower students to explore ideas, build solutions and step into the world of startups through hands-on learning, mentorship and real-world opportunities.
                     </p>
                 </motion.div>
             </div>
@@ -88,7 +88,7 @@ const AboutSJCET = memo(function AboutSJCET() {
                                 Vision<span className="text-[#FF6B4A] text-5xl">.</span>
                             </h3>
                             <p className="text-gray-600 text-lg leading-relaxed font-medium text-justify">
-                                To build a vibrant student community that inspires innovation, technology, and entrepreneurship, empowering members to turn ideas into impactful solutions.
+                                To empower students to turn their ideas into reality by providing every opportunity, resource and support they need. We aim to be the strongest support system for student entrepreneurship and startup development, creating an environment where countless successful ventures are born.
                             </p>
                         </div>
                     </motion.div>
@@ -122,7 +122,7 @@ const AboutSJCET = memo(function AboutSJCET() {
                                 Mission<span className="text-[#3b82f6] text-5xl">.</span>
                             </h3>
                             <p className="text-gray-600 text-lg leading-relaxed font-medium text-justify">
-                                To create IEDC as an Innovation Platform and to create future founders by promoting Innovation, Technology and Business Learning among student community.
+                                To build a collaborative environment that encourages learning, growth and creative exploration; to promote innovation and entrepreneurship through skill-building workshops and hands-on initiatives; and to support students in developing practical solutions and launching impactful startups.
                             </p>
                         </div>
                     </motion.div>

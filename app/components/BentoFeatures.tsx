@@ -59,7 +59,7 @@ const BentoFeatures = memo(function BentoFeatures() {
                         WHY <span className="text-[#FF6B4A]">IEDC?</span>
                     </h2>
                     <p className="text-text-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
-                        Here students take their first step as <span className="text-text-main font-bold">innovators</span> and <span className="text-text-main font-bold">entrepreneurs</span>.
+                        Here, students take their first step toward becoming <span className="text-text-main font-bold">innovators</span>, <span className="text-text-main font-bold">creators</span> and <span className="text-text-main font-bold">entrepreneurs</span>.
                     </p>
                 </motion.div>
             </div>
@@ -97,7 +97,7 @@ const BentoFeatures = memo(function BentoFeatures() {
                         <div className="mb-6">
                             <h3 className="text-3xl font-black text-white italic uppercase mb-3">Mentoring</h3>
                             <p className="text-gray-400 text-sm leading-relaxed font-medium">
-                                Startup bootcamp also provides mentoring support to help the students in developing innovative ideas, setting goals and exploring careers which is best suited.
+                                Guidance from experienced mentors who help you refine ideas, set meaningful goals, and navigate your innovation journey.
                             </p>
                         </div>
 
@@ -143,9 +143,9 @@ const BentoFeatures = memo(function BentoFeatures() {
 
                     <div className="relative z-10 h-full flex flex-col">
                         <div className="flex-1">
-                            <h3 className="text-4xl font-black text-white italic uppercase mb-4">Innovation</h3>
+                            <h3 className="text-4xl font-black text-white italic uppercase mb-4">Innovation Support</h3>
                             <p className="text-gray-400 text-base leading-relaxed font-medium mb-8 max-w-md">
-                                Startup bootcamp provides students with assistance in projects through innovative ideas which can be utilised for future endeavours.
+                                Access resources and creative guidance to bring your project ideas to life — building skills and solutions that prepare you for future ventures.
                             </p>
                             <Link href="/login" className="inline-block bg-[#FF6B4A] text-white rounded-2xl px-10 py-4 font-black uppercase tracking-tighter hover:bg-white hover:text-black transition-all duration-300 shadow-2xl shadow-[#FF6B4A]/30">
                                 Get Started
@@ -180,7 +180,7 @@ const BentoFeatures = memo(function BentoFeatures() {
                     <div className="relative z-10 h-full flex flex-col justify-end">
                         <h3 className="text-2xl font-black text-white italic uppercase mb-2">Networking</h3>
                         <p className="text-gray-400 text-xs font-medium leading-relaxed">
-                            Startup bootcamp also helps students in connecting them with other personalities to identify their potential.
+                            Connect with industry experts, founders and like-minded peers. IEDC opens doors to people who will inspire you, challenge you and help you grow.
                         </p>
                     </div>
                 </motion.div>
@@ -218,7 +218,7 @@ const BentoFeatures = memo(function BentoFeatures() {
                             </div>
                         </div>
                         <p className="text-white font-bold leading-relaxed text-sm md:text-base pr-4 max-w-sm">
-                            Startup bootcamp provides incubation support to students by giving opportunity to express their innovative ideas and make it work.
+                            Turn your ideas into functioning prototypes and startups with structured incubation support, opportunities to pitch and hands-on guidance throughout the journey.
                         </p>
                     </div>
                 </motion.div>

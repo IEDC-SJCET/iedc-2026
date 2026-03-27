@@ -23,7 +23,7 @@ const HabitsShowcase = memo(function HabitsShowcase() {
                     transition={{ duration: 0.6 }}
                     className="text-4xl md:text-[36px] font-black tracking- text-text-main leading-[1.1] font-outfit"
                 >
-                    Empowering students to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7A00] to-[#FF4D00]">innovate</span>💡 build <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7A00] to-[#FF4D00]">startups</span> and solve real-world problems through technology and creativity.
+                    Igniting student innovators to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7A00] to-[#FF4D00]">dream big,</span> build <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7A00] to-[#FF4D00]">startups</span> and design real-world solutions with tech and creativity.
                 </motion.h2>
             </div>
 
@@ -35,7 +35,7 @@ const HabitsShowcase = memo(function HabitsShowcase() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-center text-text-muted text-sm mb-4"
             >
-                Powered by student innovators, mentors, and entrepreneurs.
+                Driven by passionate student innovators, guided by mentors and supported by entrepreneurs.
             </motion.p>
 
             {/* Tags */}
@@ -68,7 +68,7 @@ const HabitsShowcase = memo(function HabitsShowcase() {
                 className="text-center mt-12"
             >
                 <p className="text-sm text-text-muted">
-                    ⭐ Powered by Kerala Startup Mission ecosystem
+                    ⭐ Powered by the Kerala Startup Mission ecosystem
                 </p>
             </motion.div>
 
@@ -81,7 +81,7 @@ const HabitsShowcase = memo(function HabitsShowcase() {
                 className="max-w-xl mx-auto px-6 text-center mt-6"
             >
                 <p className="text-text-muted text-sm leading-relaxed mb-8">
-                    IEDC Bootcamp SJCET is a hub where students transform ideas into impactful innovations through mentorship, collaboration, workshops, and startup incubation.
+                    IEDC Bootcamp SJCET is a thriving innovation hub where students turn ideas into real-world impact through expert mentorship, collaborative learning, workshops and startup incubation support.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                     <a
