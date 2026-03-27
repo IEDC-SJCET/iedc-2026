@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, memo, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FileText, X, ExternalLink, Loader2 } from "lucide-react";
+import { motion } from "framer-motion";
+import { FileText, ExternalLink, Loader2 } from "lucide-react";
 
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -10,7 +10,6 @@ const fadeInUp = {
 };
 
 const NewsletterSection = memo(function NewsletterSection() {
-    const [isViewerOpen, setIsViewerOpen] = useState(false);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
@@ -30,7 +29,7 @@ const NewsletterSection = memo(function NewsletterSection() {
                     pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 
                     try {
-                        const loadingTask = pdfjsLib.getDocument("/newsletter.pdf");
+                        const loadingTask = pdfjsLib.getDocument("/Newsletter.pdf");
                         const pdf = await loadingTask.promise;
                         const page = await pdf.getPage(1);
                         const viewport = page.getViewport({ scale: 1.5 });
@@ -117,7 +116,7 @@ const NewsletterSection = memo(function NewsletterSection() {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                             {/* PDF Preview Card */}
                             <div
-                                onClick={() => setIsViewerOpen(true)}
+                                onClick={() => window.open("/Newsletter.pdf", "_blank")}
                                 className="group relative cursor-pointer"
                             >
                                 <div className="relative aspect-[3/4] rounded-none overflow-hidden bg-[#1D1D1F] border border-black/10 shadow-2xl shadow-black/10 transition-transform duration-500 group-hover:scale-[1.02] flex items-center justify-center">
@@ -133,7 +132,7 @@ const NewsletterSection = memo(function NewsletterSection() {
                                             <div className="text-center p-8">
                                                 <FileText size={48} className="text-white/20 mx-auto mb-4" />
                                                 <p className="text-sm text-white/40">Front page preview unavailable</p>
-                                                <p className="text-xs text-white/20 mt-1 italic">(Click to open viewer)</p>
+                                                <p className="text-xs text-white/20 mt-1 italic">(Click to open PDF)</p>
                                             </div>
                                         )}
                                         <canvas
@@ -142,14 +141,14 @@ const NewsletterSection = memo(function NewsletterSection() {
                                         />
                                     </div>
 
-                                    {/* Overlay gradient */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                                    {/* Subtle Overlay gradient - significantly reduced for better visibility */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-30 group-hover:opacity-10 transition-opacity duration-500" />
 
-                                    {/* Hover overlay */}
-                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                        <div className="bg-[#FF7A00] text-black font-bold text-sm uppercase tracking-widest px-6 py-3 rounded-full flex items-center gap-2 shadow-lg shadow-[#FF7A00]/30 scale-90 group-hover:scale-100 transition-transform duration-500">
-                                            <FileText size={16} />
-                                            Read Newsletter
+                                    {/* Hover overlay hint */}
+                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 bg-black/5">
+                                        <div className="bg-[#FF7A00] text-black font-bold text-xs uppercase tracking-widest px-5 py-2.5 rounded-full flex items-center gap-2 shadow-xl scale-95 group-hover:scale-100 transition-transform duration-500">
+                                            <ExternalLink size={14} />
+                                            Open Newsletter
                                         </div>
                                     </div>
 
@@ -168,13 +167,35 @@ const NewsletterSection = memo(function NewsletterSection() {
                                         <p className="text-text-muted text-sm">Official Publication</p>
                                     </div>
 
-                                    <p className="text-text-muted leading-relaxed text-justify">
+                                    {/* Mobile-only concise text */}
+                                    <p className="text-text-muted leading-relaxed text-justify lg:hidden">
                                         Dive into the latest edition of our newsletter — packed with highlights of our bootcamps, hackathons,
                                         innovation challenges, and the inspiring stories of our community members driving change through technology.
                                     </p>
 
-                                    {/* Feature bullets */}
-                                    <div className="grid grid-cols-2 gap-4">
+                                    {/* Desktop-only detailed text */}
+                                    <div className="hidden lg:flex flex-col gap-4 text-text-muted leading-relaxed text-justify text-sm">
+                                        <p>
+                                            The IEDC SJCET Newsletter captures the spirit of innovation, creativity and entrepreneurship that thrives within our campus.
+                                            It highlights the milestones, initiatives and achievements that shaped our journey throughout the year.
+                                            This edition reflects the hard work, passion and commitment of our student innovators, mentors and the entire Bootcamp community.
+                                        </p>
+                                        <p>
+                                            Inside, you will find a comprehensive overview of our flagship events ranging from Prayana, Insendium 10.0 and Wednesday Café to Creative Pedia, SIH engagements and KTU Idea Pitching.
+                                            Each section showcases the enthusiasm and active participation of students as they explore ideas, build projects, collaborate, and step closer to the startup ecosystem.
+                                        </p>
+                                        <p>
+                                            The newsletter also highlights our impactful collaborations, including Project of the Week, Digital Fortress, Techipedia, Season of Commits and UI/UX Sprint.
+                                            These partnerships offered students hands-on learning, exposure to industry best practices and opportunities to build real-world solutions.
+                                            Along with this, orientation programs for first-years, internship initiatives, and teacherpreneur activities further strengthened our innovation-driven culture.
+                                        </p>
+                                        <p>
+                                            From YIP Orientation to our Annual General Meeting and farewell, this edition captures every moment that contributed to a vibrant year of growth and transformation.
+                                            The newsletter stands as a testament to the continuous efforts of the Bootcamp team and the supportive ecosystem that empowers students to dream, build and achieve.
+                                        </p>
+                                    </div>
+
+                                    <div className="grid grid-cols-2 gap-4 lg:hidden">
                                         {[
                                             "Event Highlights",
                                             "Student Stories",
@@ -190,75 +211,13 @@ const NewsletterSection = memo(function NewsletterSection() {
                                             </div>
                                         ))}
                                     </div>
+
                                 </div>
-
-
                             </div>
                         </div>
                     </motion.div>
                 </div>
             </section>
-
-            {/* Full-screen PDF Viewer Modal */}
-            <AnimatePresence>
-                {isViewerOpen && (
-                    <>
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.3 }}
-                            onClick={() => setIsViewerOpen(false)}
-                            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[200]"
-                        />
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                            className="fixed inset-4 md:inset-8 lg:inset-12 bg-white rounded-3xl overflow-hidden z-[201] shadow-2xl flex flex-col"
-                        >
-                            {/* Modal Header */}
-                            <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 bg-white/80 backdrop-blur-md">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-8 h-8 rounded-xl bg-[#FF7A00]/10 flex items-center justify-center">
-                                        <FileText size={16} className="text-[#FF7A00]" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-sm text-text-main">IEDC Newsletter</h3>
-                                        <p className="text-text-muted text-xs">Official Publication</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <a
-                                        href="/newsletter.pdf"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="hidden sm:flex items-center gap-1.5 text-xs font-bold text-text-muted hover:text-[#FF7A00] transition-colors uppercase tracking-wider"
-                                    >
-                                        <ExternalLink size={14} />
-                                        Open in Tab
-                                    </a>
-                                    <button
-                                        onClick={() => setIsViewerOpen(false)}
-                                        className="w-10 h-10 rounded-xl bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors"
-                                    >
-                                        <X size={18} className="text-gray-600" />
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div className="flex-1 bg-gray-100">
-                                <iframe
-                                    src="/newsletter.pdf"
-                                    className="w-full h-full"
-                                    title="IEDC Newsletter"
-                                />
-                            </div>
-                        </motion.div>
-                    </>
-                )}
-            </AnimatePresence>
         </>
     );
 });

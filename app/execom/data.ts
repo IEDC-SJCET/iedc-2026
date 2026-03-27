@@ -107,7 +107,7 @@ export const execomHistory: ExecomData[] = [
             {
                 name: "Alwin CJ",
                 role: "CFO",
-                image: "/execom/26-27/alwin.jpg",
+                image: "/execom/26-27/Alwin.jpg",
                 bio: "Overseeing financial planning and resource allocation.",
                 linkedin: "https://www.linkedin.com/in/alwin-jose-45b070275?utm_source=share_via&utm_content=profile&utm_medium=member_android",
                 email: "alwin@sjcetpalai.ac.in",
